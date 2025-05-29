@@ -463,15 +463,25 @@
         }
         
         .toc-button {
+        .toc-button {
             background: none;
             border: none;
             color: white;
             font-size: 24px;
-            padding: 0 10px;
+            padding: 15px;
             cursor: pointer;
             transition: transform 0.2s ease;
+            min-width: 60px;
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: manipulation;
         }
         
+        .toc-button i {
+            font-size: 28px;
+        }         
         .toc-button:hover {
             transform: scale(1.1);
         }
@@ -1549,7 +1559,7 @@
     <!-- 目次ヘッダー -->
     <div class="toc-header">
         <h1 class="toc-title"><img src="hitchhaul_logowithtext.png" alt="HitchHaul" class="hitchhaul-logo"></h1>
-        <button class="toc-button" id="tocButton" aria-label="メニュー" style="cursor: pointer; min-width: 44px; min-height: 44px;"><i class="fas fa-bars"></i></button>
+        <button class="toc-button" id="tocButton" aria-label="メニュー"><i class="fas fa-bars"></i></button>
     </div>
     
     <!-- 目次ドロワー -->
