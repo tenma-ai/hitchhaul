@@ -1894,7 +1894,8 @@
                         <th>UPS Ground</th>
                         <th>FedEx Ground</th>
                         <th>USPS Ground</th>
-                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
+<p><small>※調査時期: 2023年12月、料金条件: 住所間配送、ベース料金のみ（燃料サーチャージ、緊急配送料等は含まず）</small></p>
+<p><small>※出典: <a href="https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates.page" target="_blank">UPS料金表</a>, <a href="https://www.fedex.com/en-us/shipping/one-rate.html" target="_blank">FedEx料金表</a>, <a href="https://www.usps.com/ship/priority-mail.htm" target="_blank">USPS料金表</a></small></p>                             <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
                     </tr>
                     <tr>
                         <td>NY市内<br>(マンハッタン→ブルックリン)</td>
@@ -2986,97 +2987,154 @@
                                 
               <h3>事業経済性分析（収益モデルと成長戦略）</h3>
                 <h4>超リーンな事業モデル</h4>
-                <p>HitchHaulは初期は単一の高需要ルートに特化し、最低限の機能のみを持つMVPを自前で開発することで、年間固定費を<strong>$50K〜80K</strong>に抑えます。これにより損益分岐点を大幅に引き下げ、わずか<strong>約1.32万件/年（約40件/日、年間固定費$49Kの場合）</strong>で黒字化が可能になります。<br>
-                <small>[注: AWS Activateによる最大$100Kのクレジット支給等を活用した内部試算。]</small></p>
-            
-                <div class="two-column">
-                                <div class="column">
-                        <h4>リーン固定費構造</h4>
-                        <ul>
-                            <li><strong>開発費:</strong> 自社開発により初期費用抑制</li>
-                            <li><strong>サーバー費:</strong> AWS Activateなど創業支援プログラム活用</li>
-                            <li><strong>人件費:</strong> 共同創業者の開発スキル活用、最小限の体制</li>
-                            <li><strong>マーケティング:</strong> コミュニティベースの低コスト獲得</li>
-                                    </ul>
-                                </div>
-                    <div class="column">
-                        <h4>変動費と限界利益</h4>
-                        <table class="comparison-table">
-                    <tr>
-                                <th>項目</th>
-                                <th>金額/件</th>
-                    </tr>
-                    <tr>
-                                <td>平均配送料</td>
-                                <td>$40（大型荷物特化）</td>
-                    </tr>
-                    <tr>
-                                <td>手数料収入 (15%)</td>
-                                <td>$6.00</td>
-                    </tr>
-                    <tr>
-                                <td>Stripe決済手数料</td>
-                                <td>-$1.46</td>
-                            </tr>
-                            <tr>
-                                <td>基本保険プール</td>
-                                <td>-$0.50</td>
-                            </tr>
-                            <tr>
-                                <td><strong>変動費合計</strong></td>
-                                <td>-$1.96</td>
-                            </tr>
-                            <tr>
-                                <td><strong>限界利益/件</strong></td>
-                                <td>$4.04</td>
-                    </tr>
-                </table>
-                        <p>※ドライバー報酬は配送料から直接支払われます（手数料15%差引後の$34）</p>
-                    </div>
-                </div>
-            
-                
-            
-            
-            
-                <h4>必要資金と収益化までの計画</h4>
-                <table class="price-sim">
-                    <tr>
-                        <th>ランウェイ</th>
-                        <th>必要調達額</th>
-                        <th>用途</th>
-                    </tr>
-                    <tr>
-                        <td>12ヶ月</td>
-                        <td><strong>$60-70K</strong></td>
-                        <td>固定費($50K-55K程度)+20%予備。黒字化トリガー(約36件/日)達成に集中</td>
-                    </tr>
-                    <tr>
-                        <td>18ヶ月（余裕）</td>
-                        <td><strong>$90-120K</strong></td>
-                        <td>マーケティングABテスト・ドライバーオンボード強化 (固定費$55K-80K規模)</td>
-                    </tr>
-                </table>
-            
-                <div class="highlight-box">
-                    <p><strong>超リーン戦略のまとめ:</strong> HitchHaulは「単一ルート×自前開発」という戦略で、サーバ費をAWSクレジットで相殺し、最小限のキャッシュアウトで立ち上げ可能です。最大リスクは「件数立ち上げ」ですが、単一路線×大型荷物に限定することでCACを抑え、<strong>ミニマムケース(20件/日)でも黒字化</strong>が可能です。VCではなくエンジェル/助成金レベルの小規模調達で十分ローンチできます。</p>
-                </div>
-            <!-- 追加：市場規模と事業計画の統合セクション -->
-            <h3>市場規模・事業計画統合ロードマップ</h3>
-            <div class="vision-statement">
-              <p>市場規模分析と事業計画を統合し、フェーズ別の明確なKPIを設定しました。損益分岐点（約36件/日、年間約1.3万件）を基準として、各フェーズの到達目標を明確化しています。</p>
-            </div>
-            
-            <div class="table-container">
-              <table class="comparison-table">
-                <tr>
-                  <th>フェーズ</th>
-                  <th>期間</th>
-                  <th>取引数（日/年）</th>
-                  <th>GMV（年間）</th>
-                  <th>収益（年間）</th>
+<h4>事業規模別シミュレーション（修正版）</h4>
+<table class="price-sim">
+    <tr>
+        <th>ケース</th>
+        <th>件数/日</th>
+        <th>年間件数</th>
+        <th>平均取引額</th>
+        <th>総取引額<br>(年間)</th>
+        <th>手数料収入<br>(15%→18%)</th>
+        <th>付帯収入<br>(保険等)</th>
+        <th>変動費</th>
+        <th>限界利益<br>($4.04/件)</th>
+        <th>固定費</th>
+        <th>営業利益</th>
+    </tr>
+    <tr>
+        <td><strong>ミニマム</strong></td>
+        <td>20</td>
+        <td>7,300</td>
+        <td>$40</td>
+        <td>$292K</td>
+        <td>$43.8K</td>
+        <td>$21.9K</td>
+        <td>$36.5K</td>
+        <td>$29.5K</td>
+        <td>$49K</td>
+        <td><strong>-$19.5K</strong></td>
+    </tr>
+    <tr>
+        <td><strong>ベース</strong><br>(損益分岐点)</td>
+        <td>36</td>
+        <td>13,140</td> 
+        <td>$40</td>
+        <td>$525.6K</td> 
+        <td>$78.8K</td>
+        <td>$39.4K</td> 
+        <td>$65.7K</td> 
+        <td>$53.1K</td>
+        <td>$52.5K</td>
+        <td><strong>+$0.6K</strong></td>
+    </tr>
+    <tr style="background-color: #fff3cd;"> 
+        <td><strong>拡大初期</strong></td>
+        <td>100</td>
+        <td>36,500</td>
+        <td>$40→$80</td>
+        <td>$2.19M</td>
+        <td>$328.5K</td>
+        <td>$109.5K</td>
+        <td>$292.0K</td>
+        <td>$147.5K</td>
+        <td>$80K</td>
+        <td><strong>+$67.5K</strong></td>
+    </tr>
+    <tr>
+        <td><strong>成熟期</strong></td>
+        <td>372</td>
+        <td>135,660</td>
+        <td>$129</td>
+        <td>$17.5M</td>
+        <td>$3.15M (18%)</td>
+        <td>$542K</td>
+        <td>$3.15M</td>
+        <td>$548.0K</td>
+        <td>$250K</td>
+        <td><strong>+$298.0K</strong></td>
+    </tr>
+</table>
+<p>※計算根拠明細</p>
+<ul style="font-size:smaller;">
+   <li>限界利益：各フェーズにおいて一貫して$4.04/件で計算（手数料収入から決済手数料等の変動費を差し引いた純利益）</li>
+   <li>初期フェーズ：大型荷物特化の限定ルート戦略のため平均取引額$40（限界利益$4.04/件）</li>
+   <li>拡大初期：路線拡大により平均取引額$80に上昇</li>
+   <li>成熟期：全国展開で平均取引額$129、手数料率18%に引き上げ</li>
+   <li>変動費の内訳：決済手数料（取引額の2.9%+$0.30/件）、保険コスト、カスタマーサポート人件費</li>
                   <th>主要施策</th>
-                </tr>
+<!-- 追加：市場規模と事業計画の統合セクション（修正版） -->
+<h3>市場規模・事業計画統合ロードマップ</h3>
+<div class="vision-statement">
+  <p>市場規模分析と事業計画を統合し、フェーズ別の明確なKPIを設定しました。損益分岐点（約36件/日、年間約1.3万件）を基準として、各フェーズの到達目標を明確化しています。平均取引額の増加と手数料率の段階的変更により、収益性を向上させます。</p>
+</div>
+
+<div class="table-container">
+  <table class="comparison-table">
+    <tr>
+      <th>フェーズ</th>
+      <th>期間</th>
+      <th>取引数（日/年）</th>
+      <th>平均取引額</th>
+      <th>GMV（年間）</th>
+      <th>手数料率</th>
+      <th>限界利益（総額）</th>
+      <th>営業利益</th>
+    </tr>
+    <tr>
+      <td><strong>フェーズ1<br>（損益分岐）</strong></td>
+      <td>1年目前半</td>
+      <td>36件/日<br>（1.3万件/年）</td>
+      <td>$40</td>
+      <td>$525.6K</td>
+      <td>15%</td>
+      <td>$53.1K<br>($4.04/件)</td>
+      <td>$0.6K</td>
+    </tr>
+    <tr>
+      <td><strong>フェーズ2<br>（拡大初期）</strong></td>
+      <td>1年目後半<br>〜2年目</td>
+      <td>100件/日<br>（3.65万件/年）</td>
+      <td>$80</td>
+      <td>$2.9M</td>
+      <td>15%</td>
+      <td>$147.5K<br>($4.04/件)</td>
+      <td>$67.5K</td>
+    </tr>
+    <tr>
+      <td><strong>フェーズ3<br>（成長期）</strong></td>
+      <td>3〜4年目</td>
+      <td>210件/日<br>（7.7万件/年）</td>
+      <td>$100</td>
+      <td>$7.7M</td>
+      <td>15%→17%</td>
+      <td>$311.1K<br>($4.04/件)</td>
+      <td>$121.1K</td>
+    </tr>
+    <tr style="background-color: var(--highlight-bg); font-weight: bold;">
+      <td><strong>フェーズ4<br>（成熟期）</strong></td>
+      <td>5年目</td>
+      <td>372件/日<br>（13.6万件/年）</td>
+      <td>$129</td>
+      <td>$17.5M</td>
+      <td>18%</td>
+      <td>$548.0K<br>($4.04/件)</td>
+      <td>$298.0K</td>
+    </tr>
+  </table>
+</div>
+
+<div class="highlight-box">
+  <h4>損益分岐点の算定根拠（修正版）</h4>
+  <ul>
+    <li><strong>固定費:</strong> $52.5K/年（MVP自社開発、AWSクレジット活用、最小限チーム）</li>
+    <li><strong>平均取引額:</strong> フェーズ1では$40（初期の大型荷物特化戦略）→ 成熟期には$129（全国展開）</li>
+    <li><strong>手数料率:</strong> 初期15%→成熟期18%（段階的に上昇）</li>
+    <li><strong>限界利益:</strong> $4.04/件（手数料収入から決済手数料等の変動費を差し引いた純利益）</li>
+    <li><strong>損益分岐件数:</strong> $52,500 ÷ $4.04 = 約13,000件/年（≒36件/日）</li>
+  </ul>
+  <p><small>※変動費の詳細: 決済手数料（取引額の2.9%+$0.30/件）、保険コスト（取引額の0.5%）、カスタマーサポート費用</small></p>
+</div>                 </tr>
                 <tr>
                   <td><strong>フェーズ1<br>（損益分岐）</strong></td>
                   <td>1年目前半</td>
@@ -4806,32 +4864,6 @@
 </html>                        
                 <script>
                 // 円グラフの描画 (Market Size Chart)
-                const canvas = document.getElementById('marketSizeChart');
-                if (canvas) {
-                    const ctx = canvas.getContext('2d');
-                    const centerX = 150;
-                    const centerY = 150;
-                    
-                    // TAM (外側の円)
-                    ctx.beginPath();
-                    ctx.arc(centerX, centerY, 140, 0, 2 * Math.PI);
-                    ctx.fillStyle = '#e3f2fd';
-                    ctx.fill();
-                    ctx.strokeStyle = '#1976d2';
-                    ctx.lineWidth = 2;
-                    ctx.stroke();
-                    
-                    // SAM (中間の円)
-                    ctx.beginPath();
-                    ctx.arc(centerX, centerY, 90, 0, 2 * Math.PI);
-                    ctx.fillStyle = '#90caf9';
-                    ctx.fill();
-                    ctx.strokeStyle = '#1976d2';
-                    ctx.lineWidth = 2;
-                    ctx.stroke();
-                    
-                    // SOM (内側の円)
-                    ctx.beginPath();
                     ctx.arc(centerX, centerY, 40, 0, 2 * Math.PI);
                     ctx.fillStyle = '#1976d2';
                     ctx.fill();
