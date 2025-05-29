@@ -463,15 +463,25 @@
         }
         
         .toc-button {
+        .toc-button {
             background: none;
             border: none;
             color: white;
             font-size: 24px;
-            padding: 0 10px;
+            padding: 15px;
             cursor: pointer;
             transition: transform 0.2s ease;
+            min-width: 60px;
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: manipulation;
         }
         
+        .toc-button i {
+            font-size: 28px;
+        }         
         .toc-button:hover {
             transform: scale(1.1);
         }
@@ -1549,7 +1559,7 @@
     <!-- 目次ヘッダー -->
     <div class="toc-header">
         <h1 class="toc-title"><img src="hitchhaul_logowithtext.png" alt="HitchHaul" class="hitchhaul-logo"></h1>
-        <button class="toc-button" id="tocButton" aria-label="メニュー" style="cursor: pointer; min-width: 44px; min-height: 44px;"><i class="fas fa-bars"></i></button>
+        <button class="toc-button" id="tocButton" aria-label="メニュー"><i class="fas fa-bars"></i></button>
     </div>
     
     <!-- 目次ドロワー -->
@@ -1777,748 +1787,6 @@
             </div>
             
             <div class="section-divider"></div>
-            <!-- セクション4.5: 市場規模とユーザー数予測 -->
-            <div class="section" id="market-forecast">
-    <h2>市場規模とユーザー数予測</h2>
-
-    <div class="vision-statement">
-      <p>アメリカ市場におけるHitchHaul事業の市場規模と潜在性をフェルミ推定により分析。<br>
-          <br>ギグエコノミー構造、C2C/B2CのEコマース成長、P2P長距離輸送への消費者信頼度などの要因を考慮した市場機会を定量化。<br></p>
-    </div>
-
-    <div class="two-column">
-      <div class="column">
-        <h3>市場規模の概要</h3>
-        <div style="position: relative; width: 300px; height: 300px; margin: 20px auto;">
-          <canvas id="marketSizeChart" width="300" height="300"></canvas>
-        </div>
-
-        <div class="market-legend">
-          <div class="legend-item">
-            <span class="legend-color" style="background-color: #e3f2fd;"></span>
-            <span>TAM: $126.2B (総市場規模)</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-color" style="background-color: #90caf9;"></span>
-            <span>SAM: $19.4B (サービス提供可能市場)</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-color" style="background-color: #1976d2;"></span>
-            <span>SOM: $0.776B (獲得可能市場)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <h3>市場規模算出の根拠</h3>
-
-        <table class="comparison-table">
-          <tr>
-            <th>市場分類</th>
-            <th>市場規模</th>
-            <th>内訳・根拠</th>
-            <th>引用</th>
-          </tr>
-          <tr style="background-color: var(--highlight-bg); font-weight: bold;">
-            <td rowspan="3"><strong>TAM<br>（総市場規模）</strong></td>
-            <td rowspan="3"><strong>$126.2B</strong></td>
-            <td>米国州間C2C輸送市場: $82.6B</td>
-            <td>[1]</td>
-          </tr>
-          <tr style="background-color: var(--highlight-bg);">
-            <td>HitchHaul適用可能Eコマース市場: $31.4B</td>
-            <td>[2]</td>
-          </tr>
-          <tr style="background-color: var(--highlight-bg);">
-            <td>HitchHaul適用可能LTL市場: $12.2B</td>
-            <td>[3]</td>
-          </tr>
-          <tr>
-            <td><strong>SAM<br>（サービス提供可能市場）</strong></td>
-            <td><strong>$19.4B</strong></td>
-            <td>TAMの22%×調整係数0.7（主要州間高速道路カバレッジ、消費者信頼度、規制対応を考慮）</td>
-            <td>[4]</td>
-          </tr>
-          <tr>
-            <td><strong>SOM<br>（獲得可能市場）</strong></td>
-            <td><strong>$0.776B</strong></td>
-            <td>SAMの4%（5年間の獲得シェア、競合状況、ユーザー獲得の難しさを考慮）</td>
-            <td>[5]</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-
-    <h3>潜在ユーザー数の推定</h3>
-
-  <div class="highlight-box">
-      <p><strong>総潜在ユーザー数: 243.4万人</strong><br>
-      （荷送人95.0万人 + 輸送者148.4万人）</p>
-  </div>
-
-  <div class="two-column">
-      <div class="column">
-          <h4>荷送人（需要側）: 95.0万人</h4>
-          <table class="comparison-table">
-              <tr>
-                  <th>ユーザータイプ</th>
-                  <th>推定数</th>
-                  <th>根拠</th>
-              </tr>
-              <tr>
-                  <td>C2C潜在荷送人</td>
-                  <td>54.0万人</td>
-                  <td>C2Cオンライン販売者1500万人×36% [6]</td>
-              </tr>
-              <tr>
-                  <td>小規模B2C荷送人</td>
-                  <td>11.0万人</td>
-                  <td>小規模事業者3200万×12%×30% [7]</td>
-              </tr>
-              <tr>
-                  <td>個人荷送人</td>
-                  <td>30.0万人</td>
-                  <td>米国成人2.5億×12% [8]</td>
-              </tr>
-          </table>
-      </div>
-
-      <div class="column">
-          <h4>輸送者（供給側）: 148.4万人</h4>
-          <table class="comparison-table">
-              <tr>
-                  <th>ユーザータイプ</th>
-                  <th>推定数</th>
-                  <th>根拠</th>
-              </tr>
-              <tr>
-                  <td>ギグワーカー輸送者</td>
-                  <td>85.9万人</td>
-                  <td>米国ギグワーカー5900万人×45%×32% [9]</td>
-              </tr>
-              <tr>
-                  <td>ピックアップ/SUV輸送者</td>
-                  <td>62.5万人</td>
-                  <td>未使用車両5000万台×25%×5% [10]</td>
-              </tr>
-          </table>
-      </div>
-  </div>
-    <h3>5年間の収益推移予測</h3>
-    <div class="table-container">
-      <table class="comparison-table">
-        <tr>
-          <th>年度</th>
-          <th>取引数（件）</th>
-          <th>平均取引額（$）</th>
-          <th>総取引額（百万$）</th>
-          <th>プラットフォーム収益（百万$）</th>
-          <th>成長率</th>
-        </tr>
-        <tr>
-          <td>1年目</td>
-          <td>28,500</td>
-          <td>120.00</td>
-          <td>3.42</td>
-          <td>0.62</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>2年目</td>
-          <td>48,450</td>
-          <td>122.40</td>
-          <td>5.93</td>
-          <td>1.07</td>
-          <td>70%</td>
-        </tr>
-        <tr>
-          <td>3年目</td>
-          <td>77,520</td>
-          <td>124.85</td>
-          <td>9.68</td>
-          <td>1.74</td>
-          <td>60%</td>
-        </tr>
-        <tr>
-          <td>4年目</td>
-          <td>108,528</td>
-          <td>127.34</td>
-          <td>13.82</td>
-          <td>2.49</td>
-          <td>40%</td>
-        </tr>
-        <tr style="background-color: var(--highlight-bg); font-weight: bold;">
-          <td>5年目</td>
-          <td>135,660</td>
-          <td>129.00</td>
-          <td>17.50</td>
-          <td>3.15</td>
-          <td>25%</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="highlight-box">
-      <h4>市場予測と事業計画サマリー</h4>
-      <ul>
-        <li><strong>5年目予測プラットフォーム収益:</strong> 約$3.15M（約4.5億円）</li>
-        <li><strong>損益分岐点:</strong> 約1.32万件の取引（年間固定費$49Kの場合）で達成見込み</li>
-        <li><strong>成長ドライバー:</strong> ギグエコノミー拡大（CAGR 16.18% [11]）、C2C Eコマース成長</li>
-        <li><strong>リスク要因:</strong> P2P長距離輸送への消費者信頼度（14% [12]）、規制対応の複雑さ</li>
-      </ul>
-    </div>
-
-  <h3>フェルミ推定の計算式と詳細根拠</h3>
-
-  <div class="vision-statement">
-      <h4>計算の全体概要</h4>
-      <p>アメリカ市場におけるHitchHaul事業の市場規模と潜在性を<strong>5つの主要計算ステップ</strong>で定量化しました。各計算は仮定に基づき、実証可能なデータソースを使用しています。<strong>最終的なSOM（獲得可能市場）$77.6M</strong>は、既存P2Pプラットフォームの実績を参考にした目標値です。</p>
-  </div>
-                
-                <div class="expandable-section">
-      <h4 class="expandable-title" onclick="toggleExpand(this)">
-                        <span class="expand-icon">▼</span>
-          1. TAM（総市場規模）: $126.2B - 3つの市場セグメントの合計
-      </h4>
-                    <div class="expandable-content">
-                    <div class="summary-box">
-              <h5>計算概要</h5>
-              <p>HitchHaulが理論的に参入可能な全市場規模を、<strong>州間C2C輸送</strong>、<strong>州間Eコマース配送</strong>、<strong>LTL（Less Than Truckload）</strong>の3セグメントで算出。適用率を使用して市場サイズを推定。</p>
-                    </div>
-
-          <h5>セグメント別計算</h5>
-
-          <h6>① 米国州間C2C輸送市場: $82.6B</h6>
-                        <div class="calculation-details">
-              <pre>計算式: 北米長距離輸送市場 × C2Cシェア × 米国比率
-$980.7B × 11.2% × 75% = $82.6B</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>北米長距離輸送市場$980.7B: Statista, 2024</li>
-                  <li>C2Cシェア11.2%: 個人間長距離輸送需要の実績データ</li>
-                  <li>米国比率75%: 北米市場における米国の経済規模</li>
-              </ul>
-                        </div>
-
-          <h6>② HitchHaul適用可能Eコマース市場: $31.4B</h6>
-          <div class="calculation-details">
-              <pre>計算式: 米国Eコマース州間配送市場 × 適用率
-$209.3B × 15% = $31.4B</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>Eコマース州間配送市場$209.3B: eMarketer, 2024</li>
-                  <li>適用率15%の根拠: P2P長距離輸送信頼度調査に基づく</li>
-                  <li>対象: 個人から個人への商品発送</li>
-                            </ul>
-                        </div>
-
-          <h6>③ HitchHaul適用可能LTL市場: $12.2B</h6>
-          <div class="calculation-details">
-              <pre>計算式: 米国LTL市場 × 適用率
-$610B × 2% = $12.2B</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>米国LTL市場$610B: American Transportation Research Institute, 2024</li>
-                  <li>適用率2%の根拠: B2Bプロフェッショナルサービスの既存市場動向</li>
-                  <li>対象: 中小企業の非緊急配送</li>
-                            </ul>
-          </div>
-
-          <div class="highlight-box">
-              <p><strong>TAM合計: $82.6B + $31.4B + $12.2B = $126.2B</strong></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="expandable-section">
-      <h4 class="expandable-title" onclick="toggleExpand(this)">
-                        <span class="expand-icon">▼</span>
-          2. SAM（サービス提供可能市場）: $19.4B - 実現可能性22%×調整係数0.7を適用
-      </h4>
-                    <div class="expandable-content">
-                    <div class="summary-box">
-              <h5>計算概要</h5>
-              <p>TAMから実際にHitchHaulがサービス提供可能な市場を算出。<strong>地理的制約</strong>、<strong>消費者受容性</strong>、<strong>規制対応可能性</strong>を総合的に評価した実現可能率22%と調整係数0.7を適用。</p>
-                    </div>
-
-          <h5>計算式</h5>
-                        <div class="calculation-details">
-              <pre>SAM = TAM × 実現可能率 × 調整係数
-$126.2B × 22% × 0.7 = $19.4B</pre>
-                        </div>
-
-          <h5>実現可能率22%の詳細内訳</h5>
-          <h6>地理的カバレッジ要因: 40%</h6>
-                            <ul>
-              <li><strong>主要州間高速道路カバレッジ</strong>: 5大州間高速道路による市場カバレッジ</li>
-              <li><strong>データソース</strong>: FHWA（連邦高速道路管理局）交通量データ</li>
-              <li><strong>対象路線</strong>: I-95, I-10, I-40, I-80, I-90の主要幹線</li>
-                            </ul>
-
-          <h6>消費者受容性要因: 55%</h6>
-                            <ul>
-              <li><strong>新サービス試行意欲</strong>: 物流イノベーション採用調査に基づく</li>
-              <li><strong>データソース</strong>: McKinsey物流技術導入調査, 2023</li>
-              <li><strong>セグメント別受容率</strong>: 個人55%, 中小企業45%, 大企業30%</li>
-                            </ul>
-
-          <h6>総合調整係数: 0.7</h6>
-          <ul>
-              <li><strong>規制対応の複雑さ</strong>: 州ごとの法規制差異への対応コスト</li>
-              <li><strong>ブランド構築期間</strong>: 信頼獲得に要する時間的制約</li>
-              <li><strong>運営効率性</strong>: 初期段階での最適化限界</li>
-          </ul>
-
-          <div class="highlight-box">
-              <p><strong>実現可能率計算: 40% × 55% × 調整係数0.7 = 15.4%</strong></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="expandable-section">
-      <h4 class="expandable-title" onclick="toggleExpand(this)">
-                        <span class="expand-icon">▼</span>
-          3. SOM（獲得可能市場）: $77.6M - 競合分析に基づく現実的シェア4%
-      </h4>
-                    <div class="expandable-content">
-                    <div class="summary-box">
-              <h5>計算概要</h5>
-              <p>SAMからHitchHaulが実際に獲得可能な市場シェアを算出。<strong>既存P2Pプラットフォームの実績分析</strong>と<strong>ユーザー獲得コスト</strong>、<strong>信頼構築期間</strong>を考慮した4%のシェアを設定。</p>
-                    </div>
-
-          <h5>計算式</h5>
-                        <div class="calculation-details">
-              <pre>SOM = SAM × 獲得可能シェア
-$19.4B × 4% = $0.776B ($77.6M)</pre>
-                        </div>
-
-          <h5>獲得可能シェア4%の根拠</h5>
-          <h6>類似P2Pプラットフォーム分析</h6>
-          <ul>
-              <li><strong>GoShare</strong>: 都市内配送で平均2-3%の市場シェア</li>
-              <li><strong>Dropoff</strong>: 同日配送で1-2%のシェア獲得</li>
-              <li><strong>Roadie</strong>: Walmart提携により4-5%達成</li>
-              <li><strong>平均実績</strong>: 新興P2Pプラットフォームの3-5年目シェア</li>
-                            </ul>
-
-          <h6>経済的実現可能性要因</h6>
-                            <ul>
-              <li><strong>ユーザー獲得コスト（CAC）</strong>: 荷送人$45, ドライバー$35</li>
-              <li><strong>顧客生涯価値（LTV）</strong>: 荷送人$180, ドライバー$150</li>
-              <li><strong>LTV/CAC比率</strong>: 4.0（健全な事業指標）</li>
-                            </ul>
-
-          <h6>信頼構築・ブランド認知要因</h6>
-          <ul>
-              <li><strong>P2P信頼構築期間</strong>: 平均18-24ヶ月</li>
-              <li><strong>ネットワーク効果</strong>: クリティカルマス到達後の成長加速</li>
-              <li><strong>地域別展開戦略</strong>: 段階的市場拡大による効率性</li>
-          </ul>
-
-          <div class="highlight-box">
-              <p><strong>シェア設定: 競合実績3-5% → HitchHaul目標4%</strong></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="expandable-section">
-      <h4 class="expandable-title" onclick="toggleExpand(this)">
-          <span class="expand-icon">▼</span>
-          4. 潜在ユーザー数: 荷送人95.0万人・ドライバー148.4万人の詳細計算
-      </h4>
-      <div class="expandable-content">
-                    <div class="summary-box">
-              <h5>計算概要</h5>
-              <p>プラットフォームの<strong>需要側（荷送人）</strong>と<strong>供給側（ドライバー）</strong>の潜在ユーザー数を、それぞれ異なるアプローチで算出。実証データと調査結果に基づく現実的な参加率を適用。</p>
-                    </div>
-
-          <h5>荷送人（需要側）の計算</h5>
-
-          <h6>① C2C荷送人: 54.0万人</h6>
-                        <div class="calculation-details">
-              <pre>計算式: C2Cオンライン販売者 × 利用意向率
-1,500万人 × 36% = 54.0万人</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>C2C販売者1,500万人: Pew Research Center, 2023</li>
-                  <li>利用意向率36%: P2P配送に対する意向調査</li>
-              </ul>
-                        </div>
-
-          <h6>② B2C小規模事業者: 11.0万人</h6>
-          <div class="calculation-details">
-              <pre>計算式: 米国小規模事業者 × Eコマース実施率 × 利用意向率
-3,200万 × 12% × 30% = 11.0万人</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>小規模事業者3,200万: SBA（中小企業庁）統計, 2024</li>
-                  <li>Eコマース実施率12%: 中小企業デジタル化調査</li>
-                  <li>利用意向率30%: 新配送サービスへの関心度調査</li>
-                            </ul>
-                        </div>
-
-          <h6>③ 個人長距離配送ニーズ: 30.0万人</h6>
-          <div class="calculation-details">
-              <pre>計算式: 米国成人人口 × 利用意向率
-2.5億人 × 12% = 30.0万人</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>成人人口2.5億人: Census Bureau, 2023</li>
-                  <li>利用意向率12%: 長距離P2P配送サービスへの関心調査</li>
-                            </ul>
-                        </div>
-
-          <div class="highlight-box">
-              <p><strong>荷送人合計: 54.0 + 11.0 + 30.0 = 95.0万人</strong></p>
-            </div>
-
-          <h5>ドライバー（供給側）の計算</h5>
-
-          <h6>① ギグワーカー: 85.9万人</h6>
-          <div class="calculation-details">
-              <pre>計算式: 米国ギグワーカー × 輸送関連率 × 参加率
-5,900万人 × 45% × 32% = 85.9万人</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>ギグワーカー5,900万人: Upwork Future of Work調査, 2024</li>
-                  <li>輸送関連率45%: 配送・輸送業務経験者の割合</li>
-                  <li>参加率32%: P2P配送プラットフォームへの意向率（80%）× 実際参加率（40%）</li>
-              </ul>
-            </div>
-
-          <h6>② 車両所有者（補完的供給）: 62.5万人</h6>
-          <div class="calculation-details">
-              <pre>計算式: ピックアップトラック/SUV所有者 × 長距離移動率 × 参加率
-5,000万人 × 25% × 5% = 62.5万人</pre>
-
-              <p><strong>データソース・根拠:</strong></p>
-              <ul>
-                  <li>大型車両所有者5,000万人: FHWA車両登録統計, 2023</li>
-                  <li>長距離移動率25%: 定期的な州間移動者の割合</li>
-                  <li>参加率5%: 「ついで」配送への関心度</li>
-              </ul>
-                </div>
-
-          <div class="highlight-box">
-              <p><strong>実効ドライバー数: 85.9 + 62.5 = 148.4万人</strong></p>
-          </div>
-                    </div>
-                </div>
-                
-                <div class="expandable-section">
-                <h4 class="expandable-title" onclick="toggleExpand(this)">
-                    <span class="expand-icon">▼</span>
-          5. 収益予測: 初年度28,500件→5年目$3.17M - 段階的成長モデル
-                </h4>
-                <div class="expandable-content">
-                    <div class="summary-box">
-              <h5>計算概要</h5>
-              <p>潜在ユーザー数から実際の取引数と収益を予測。<strong>段階的な市場浸透率</strong>と<strong>ユーザー行動パターン</strong>を考慮した現実的な成長曲線を設定。5年目に年間$3.17Mの収益を達成するシナリオ。</p>
-                    </div>
-
-          <h5>取引数の予測</h5>
-
-          <h6>初年度（Year 1）: 28,500件</h6>
-                        <div class="calculation-details">
-              <pre>計算式: 潜在荷送人 × 採用率 × 年間平均取引回数
-950,000人 × 0.3% × 10回 = 28,500件</pre>
-
-              <p><strong>前提条件:</strong></p>
-              <ul>
-                  <li>採用率0.3%: 新サービスへの参加態度</li>
-                  <li>年間取引回数10回: 利用パターン</li>
-                  <li>地域限定展開: 主要都市圏での限定的サービス開始</li>
-              </ul>
-                        </div>
-
-          <h6>5年目（Year 5）: 135,660件</h6>
-          <div class="calculation-details">
-              <pre>計算式: 成熟期荷送人 × 採用率 × 年間平均取引回数
-950,000人 × 0.7% × 20.4回 = 135,660件</pre>
-
-              <p><strong>成長前提:</strong></p>
-              <ul>
-                  <li>採用率向上: 0.3% → 0.7%（信頼構築・ブランド認知向上）</li>
-                  <li>利用頻度増加: 10回 → 20.4回（習慣化・満足度向上）</li>
-                  <li>全国展開: 主要州間ルートの完全カバレッジ</li>
-                            </ul>
-                        </div>
-
-          <h5>収益構造と予測</h5>
-
-          <h6>平均取引額: $129.89</h6>
-          <div class="calculation-details">
-              <p><strong>内訳計算:</strong></p>
-              <ul>
-                  <li>短距離配送（50マイル未満）: $45 × 40% = $18.00</li>
-                  <li>中距離配送（50-300マイル）: $125 × 45% = $56.25</li>
-                  <li>長距離配送（300マイル以上）: $365 × 15% = $54.75</li>
-                  <li><strong>加重平均: $18.00 + $56.25 + $54.75 = $129.00</strong></li>
-              </ul>
-
-              <p><strong>データソース:</strong></p>
-              <ul>
-                  <li>競合プラットフォーム（Roadie、GoShare）の実績料金</li>
-                  <li>従来配送業者との価格比較分析</li>
-                  <li>消費者支払意欲調査</li>
-              </ul>
-                    </div>
-
-          <h6>プラットフォーム手数料率: 18%</h6>
-          <div class="calculation-details">
-              <p><strong>料率設定根拠:</strong></p>
-              <ul>
-                  <li>競合比較: Uber Freight (10-15%), GoShare (20-25%)</li>
-                  <li>サービス範囲: 保険、決済、顧客サポート、マーケティング</li>
-                  <li>市場浸透戦略: 初期は15%、成熟期に18%へ段階的上昇</li>
-                </ul>
-            </div>
-
-          <h6>5年目プラットフォーム収益</h6>
-          <div class="calculation-details">
-              <pre>計算式: 年間取引数 × 平均取引額 × 手数料率
-135,660件 × $129.00 × 18% = $3,149,452</pre>
-
-              <div class="highlight-box">
-                  <p><strong>5年目収益: $3.15M（月平均$262K）</strong></p>
-                </div>
-            </div>
-            
-          <h5>成長軌道と要因</h5>
-          <div class="growth-trajectory">
-              <h6>Year 1-2: 基盤構築期</h6>
-              <ul>
-                  <li>限定的地域展開、基本機能の最適化</li>
-                  <li>初期ユーザーからのフィードバック収集・改善</li>
-                  <li>規制対応・保険体制の確立</li>
-                        </ul>
-
-              <h6>Year 3-4: 拡張期</h6>
-              <ul>
-                  <li>主要都市間ルートの拡大</li>
-                  <li>企業顧客（B2B）の本格獲得</li>
-                  <li>高度な機能（AI最適化、予測分析）の導入</li>
-              </ul>
-
-              <h6>Year 5+: 成熟期</h6>
-              <ul>
-                  <li>全国ネットワークの完成</li>
-                  <li>プレミアムサービスの展開</li>
-                  <li>収益率の最適化・新事業領域の探索</li>
-                  <li>国際展開の検討</li>
-                  <li>物流インフラとのさらなる連携</li>
-                  <li>持続可能な輸送モデルのリーダーシップ確立</li>
-                        </ul>
-                    </div>
-      </div>
-                    </div>
-                    
-  <h3>事業経済性分析（収益モデルと成長戦略）</h3>
-    <h4>超リーンな事業モデル</h4>
-    <p>HitchHaulは初期は単一の高需要ルートに特化し、最低限の機能のみを持つMVPを自前で開発することで、年間固定費を<strong>$50K〜80K</strong>に抑えます。これにより損益分岐点を大幅に引き下げ、わずか<strong>約1.32万件/年（約40件/日、年間固定費$49Kの場合）</strong>で黒字化が可能になります。<br>
-    <small>[注: AWS Activateによる最大$100Kのクレジット支給等を活用した内部試算。]</small></p>
-
-    <div class="two-column">
-                    <div class="column">
-            <h4>リーン固定費構造</h4>
-            <ul>
-                <li><strong>開発費:</strong> 自社開発により初期費用抑制</li>
-                <li><strong>サーバー費:</strong> AWS Activateなど創業支援プログラム活用</li>
-                <li><strong>人件費:</strong> 共同創業者の開発スキル活用、最小限の体制</li>
-                <li><strong>マーケティング:</strong> コミュニティベースの低コスト獲得</li>
-                        </ul>
-                    </div>
-        <div class="column">
-            <h4>変動費と限界利益</h4>
-            <table class="comparison-table">
-        <tr>
-                    <th>項目</th>
-                    <th>金額/件</th>
-        </tr>
-        <tr>
-                    <td>平均配送料</td>
-                    <td>$40（大型荷物特化）</td>
-        </tr>
-        <tr>
-                    <td>手数料収入 (15%)</td>
-                    <td>$6.00</td>
-        </tr>
-        <tr>
-                    <td>Stripe決済手数料</td>
-                    <td>-$1.46</td>
-                </tr>
-                <tr>
-                    <td>基本保険プール</td>
-                    <td>-$0.50</td>
-                </tr>
-                <tr>
-                    <td><strong>変動費合計</strong></td>
-                    <td>-$1.96</td>
-                </tr>
-                <tr>
-                    <td><strong>限界利益/件</strong></td>
-                    <td>$4.04</td>
-        </tr>
-    </table>
-            <p>※ドライバー報酬は配送料から直接支払われます（手数料15%差引後の$34）</p>
-        </div>
-    </div>
-
-    
-
-    <h4>事業規模別シミュレーション</h4>
-    <table class="price-sim">
-        <tr>
-            <th>ケース</th>
-            <th>件数/日</th>
-            <th>年間件数</th>
-            <th>売上<br>(手数料+付帯)</th>
-            <th>変動費</th>
-            <th>固定費</th>
-            <th>営業利益</th>
-        </tr>
-        <tr>
-            <td><strong>ミニマム</strong></td>
-            <td>20</td>
-            <td>7,300</td>
-            <td>$116K</td>
-            <td>$14K</td>
-            <td>$49K</td>
-            <td><strong>+$53K</strong></td>
-        </tr>
-        <tr>
-            <td><strong>ベース</strong></td>
-            <td>36 (約1.3万件/年)</td>
-            <td>13,140</td> <td>$209K</td> <td>$26K</td> <td>$52.5K</td>
-            <td><strong>+$130.5K</strong></td>
-             </tr>
-         <tr style="background-color: #fff3cd;"> <td><strong>ベース (当初40件/日)</strong></td>
-            <td>40</td>
-            <td>14,600</td>
-            <td>$232K</td>
-            <td>$29K</td>
-            <td>$49K</td>
-            <td><strong>+$154K</strong></td>
-        </tr>
-        <tr>
-            <td><strong>拡大</strong></td>
-            <td>100</td>
-            <td>36,500</td>
-            <td>$581K</td>
-            <td>$72K</td>
-            <td>$80K</td>
-            <td><strong>+$429K</strong></td>
-        </tr>
-    </table>
-    <p>※付帯収益として「+$10 保険/プレミアム」の利用率30%を含む。<br>
-       <span style="font-size:smaller;">※ベースケースは損益分岐点（約36件/日、年間約1.3万件、年間固定費約$52.5K）を反映した数値に調整。当初の40件/日ケースも参考として記載。</span>
-    </p>
-
-
-    <h4>必要資金と収益化までの計画</h4>
-    <table class="price-sim">
-        <tr>
-            <th>ランウェイ</th>
-            <th>必要調達額</th>
-            <th>用途</th>
-        </tr>
-        <tr>
-            <td>12ヶ月</td>
-            <td><strong>$60-70K</strong></td>
-            <td>固定費($50K-55K程度)+20%予備。黒字化トリガー(約36件/日)達成に集中</td>
-        </tr>
-        <tr>
-            <td>18ヶ月（余裕）</td>
-            <td><strong>$90-120K</strong></td>
-            <td>マーケティングABテスト・ドライバーオンボード強化 (固定費$55K-80K規模)</td>
-        </tr>
-    </table>
-
-    <div class="highlight-box">
-        <p><strong>超リーン戦略のまとめ:</strong> HitchHaulは「単一ルート×自前開発」という戦略で、サーバ費をAWSクレジットで相殺し、最小限のキャッシュアウトで立ち上げ可能です。最大リスクは「件数立ち上げ」ですが、単一路線×大型荷物に限定することでCACを抑え、<strong>ミニマムケース(20件/日)でも黒字化</strong>が可能です。VCではなくエンジェル/助成金レベルの小規模調達で十分ローンチできます。</p>
-    </div>
-    <h3>参考ソース一覧</h3>
-  <div class="reference-list">
-      <ol>
-          <li>北米長距離輸送市場980.7億ドル×C2Cシェア11.2%×米国比率75% (Statista, 2024)</li>
-          <li>米国Eコマース州間配送市場209.3億ドル×適用率15% (eMarketer, 2024)</li>
-          <li>米国LTL市場610億ドル×適用率2% (American Transportation Research Institute, 2024)</li>
-          <li>主要州間高速道路カバレッジ40%×新サービス試行意欲55%×調整係数0.7 (McKinsey, 2023)</li>
-          <li>競合P2P物流プラットフォーム市場シェア分析、物流テック採用調査 (CB Insights, 2023)</li>
-          <li>米国C2Cオンライン販売者1500万人、利用意向率36% (Pew Research, 2023)</li>
-          <li>米国小規模事業者3200万、Eコマース実施率12%、利用意向率30% (SBA, 2024)</li>
-          <li>米国成人人口2.5億人、利用意向率12% (Census Bureau, 2023)</li>
-          <li>米国ギグワーカー5900万人、輸送関連45%、参加率32% (Upwork, 2024)</li>
-          <li>ピックアップトラック/SUV所有者5000万人、長距離移動率25%、参加率5% (FHWA, 2023)</li>
-          <li>ギグエコノミー市場規模5567億ドル、CAGR 16.18% (Fortune Business Insights, 2024)</li>
-          <li>P2P長距離輸送サービス信頼度調査、信頼する消費者14% (Deloitte, 2023)</li>
-      </ol>
-  </div>
-<script>
-// 円グラフの描画 (Market Size Chart)
-const canvasMarket = document.getElementById('marketSizeChart');
-if (canvasMarket) { // ID名を修正 (元はcanvas)
-    const ctx = canvasMarket.getContext('2d'); // ID名を修正 (元はcanvas)
-    const centerX = 150;
-    const centerY = 150;
-
-    // TAM (外側の円)
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, 140, 0, 2 * Math.PI);
-    ctx.fillStyle = '#e3f2fd';
-    ctx.fill();
-    ctx.strokeStyle = '#1976d2';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-
-    // SAM (中間の円)
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, 90, 0, 2 * Math.PI);
-    ctx.fillStyle = '#90caf9';
-    ctx.fill();
-    ctx.strokeStyle = '#1976d2';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-
-    // SOM (内側の円)
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, 40, 0, 2 * Math.PI);
-    ctx.fillStyle = '#1976d2';
-    ctx.fill();
-
-    // ラベル
-    ctx.fillStyle = '#333';
-    ctx.font = 'bold 16px Arial';
-    ctx.textAlign = 'center';
-
-    // TAMラベル
-    ctx.fillText('TAM', centerX, centerY - 100);
-    ctx.font = '12px Arial';
-    ctx.fillText('$126.2B', centerX, centerY - 85);
-
-    // SAMラベル
-    ctx.font = 'bold 14px Arial';
-    ctx.fillText('SAM', centerX, centerY - 45);
-    ctx.font = '12px Arial';
-    ctx.fillText('$19.4B', centerX, centerY - 32);
-
-    // SOMラベル
-    ctx.fillStyle = 'white';
-    ctx.font = 'bold 12px Arial';
-    ctx.fillText('SOM', centerX, centerY - 5);
-    ctx.font = '10px Arial';
-    ctx.fillText('$0.776B', centerX, centerY + 8);
-}
-</script>
-</div>
-<div class="section-divider"></div>
 
             <!-- セクション5: 大手配送業社との比較 -->
             <div class="section" id="comparison">
@@ -2740,7 +2008,7 @@ if (canvasMarket) { // ID名を修正 (元はcanvas)
                     <div class="column">
                         <h3>HitchHaulの環境・時間的価値</h3>
                         <ul>
-                            <li><strong>環境負荷軽減:</strong> 既存の移動をフル活用することで、類似サービスでは<strong>配送距離を33-50%削減</strong>できることが実証済み。これは温室効果ガス排出量の大幅削減に直結。</li>
+                            <li><strong>環境負荷軽減:</strong> 既存の移動をフル活用することで、類似サービスでは<strong>配送距離を33-50%削減（MITのReal-Time Ride-Sharing研究による）</strong>できることが実証済み。これは温室効果ガス排出量の大幅削減に直結。</li>
                             <li><strong>速度の優位性:</strong> 特に中距離配送において顕著。LA→ラスベガスの場合、UPS/FedExの翌日配送と比較して、HitchHaulは<strong>当日4-7時間以内</strong>に配達可能。</li>
                             <li><strong>柔軟性:</strong> 70ポンドを超える大型荷物や不規則な形状の荷物も、適切な車両を持つドライバーとマッチングすることで対応可能。USPSの70ポンド制限や、UPS/FedExの高額な特大荷物料金を回避。</li>
                         </ul>
@@ -3181,134 +2449,823 @@ if (canvasMarket) { // ID名を修正 (元はcanvas)
             </div>
             
             <div class="section-divider"></div>
-            
-            <!-- セクション8: 収益モデル -->
-            <div class="section" id="revenue-model">
-                <h2>収益モデル</h2>
+<!-- セクション4.5: 市場規模とユーザー数予測 -->
+            <div class="section" id="market-forecast">
+    <h2>市場規模とユーザー数予測</h2>
+
+    <div class="vision-statement">
+      <p>アメリカ市場におけるHitchHaul事業の市場規模と潜在性をフェルミ推定により分析。<br>
+          <br>ギグエコノミー構造、C2C/B2CのEコマース成長、P2P長距離輸送への消費者信頼度などの要因を考慮した市場機会を定量化。<br></p>
+    </div>
+
+    <div class="two-column">
+      <div class="column">
+        <h3>市場規模の概要</h3>
+        <div style="position: relative; width: 300px; height: 300px; margin: 20px auto;">
+          <canvas id="marketSizeChart" width="300" height="300"></canvas>
+        </div>
+
+        <div class="market-legend">
+          <div class="legend-item">
+            <span class="legend-color" style="background-color: #e3f2fd;"></span>
+            <span>TAM: $126.2B (総市場規模)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color" style="background-color: #90caf9;"></span>
+            <span>SAM: $19.4B (サービス提供可能市場)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color" style="background-color: #1976d2;"></span>
+            <span>SOM: $0.776B (獲得可能市場)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>市場規模算出の根拠</h3>
+
+        <table class="comparison-table">
+          <tr>
+            <th>市場分類</th>
+            <th>市場規模</th>
+            <th>内訳・根拠</th>
+            <th>引用</th>
+          </tr>
+          <tr style="background-color: var(--highlight-bg); font-weight: bold;">
+            <td rowspan="3"><strong>TAM<br>（総市場規模）</strong></td>
+            <td rowspan="3"><strong>$126.2B</strong></td>
+            <td>米国州間C2C輸送市場: $82.6B</td>
+            <td>[1]</td>
+          </tr>
+          <tr style="background-color: var(--highlight-bg);">
+            <td>HitchHaul適用可能Eコマース市場: $31.4B</td>
+            <td>[2]</td>
+          </tr>
+          <tr style="background-color: var(--highlight-bg);">
+            <td>HitchHaul適用可能LTL市場: $12.2B</td>
+            <td>[3]</td>
+          </tr>
+          <tr>
+            <td><strong>SAM<br>（サービス提供可能市場）</strong></td>
+            <td><strong>$19.4B</strong></td>
+            <td>TAMの22%×調整係数0.7（主要州間高速道路カバレッジ、消費者信頼度、規制対応を考慮）</td>
+            <td>[4]</td>
+          </tr>
+          <tr>
+            <td><strong>SOM<br>（獲得可能市場）</strong></td>
+            <td><strong>$0.776B</strong></td>
+            <td>SAMの4%（5年間の獲得シェア、競合状況、ユーザー獲得の難しさを考慮）</td>
+            <td>[5]</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <h3>潜在ユーザー数の推定</h3>
+
+  <div class="highlight-box">
+      <p><strong>総潜在ユーザー数: 243.4万人</strong><br>
+      （荷送人95.0万人 + 輸送者148.4万人）</p>
+  </div>
+
+  <div class="two-column">
+      <div class="column">
+          <h4>荷送人（需要側）: 95.0万人</h4>
+          <table class="comparison-table">
+              <tr>
+                  <th>ユーザータイプ</th>
+                  <th>推定数</th>
+                  <th>根拠</th>
+              </tr>
+              <tr>
+                  <td>C2C潜在荷送人</td>
+                  <td>54.0万人</td>
+                  <td>C2Cオンライン販売者1500万人×36% [6]</td>
+              </tr>
+              <tr>
+                  <td>小規模B2C荷送人</td>
+                  <td>11.0万人</td>
+                  <td>小規模事業者3200万×12%×30% [7]</td>
+              </tr>
+              <tr>
+                  <td>個人荷送人</td>
+                  <td>30.0万人</td>
+                  <td>米国成人2.5億×12% [8]</td>
+              </tr>
+          </table>
+      </div>
+
+      <div class="column">
+          <h4>輸送者（供給側）: 148.4万人</h4>
+          <table class="comparison-table">
+              <tr>
+                  <th>ユーザータイプ</th>
+                  <th>推定数</th>
+                  <th>根拠</th>
+              </tr>
+              <tr>
+                  <td>ギグワーカー輸送者</td>
+                  <td>85.9万人</td>
+                  <td>米国ギグワーカー5900万人×45%×32% [9]</td>
+              </tr>
+              <tr>
+                  <td>ピックアップ/SUV輸送者</td>
+                  <td>62.5万人</td>
+                  <td>未使用車両5000万台×25%×5% [10]</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+    <h3>5年間の収益推移予測</h3>
+    <div class="table-container">
+      <table class="comparison-table">
+        <tr>
+          <th>年度</th>
+          <th>取引数（件）</th>
+          <th>平均取引額（$）</th>
+          <th>総取引額（百万$）</th>
+          <th>プラットフォーム収益（百万$）</th>
+          <th>成長率</th>
+        </tr>
+        <tr>
+          <td>1年目</td>
+          <td>28,500</td>
+          <td>120.00</td>
+          <td>3.42</td>
+          <td>0.62</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>2年目</td>
+          <td>48,450</td>
+          <td>122.40</td>
+          <td>5.93</td>
+          <td>1.07</td>
+          <td>70%</td>
+        </tr>
+        <tr>
+          <td>3年目</td>
+          <td>77,520</td>
+          <td>124.85</td>
+          <td>9.68</td>
+          <td>1.74</td>
+          <td>60%</td>
+        </tr>
+        <tr>
+          <td>4年目</td>
+          <td>108,528</td>
+          <td>127.34</td>
+          <td>13.82</td>
+          <td>2.49</td>
+          <td>40%</td>
+        </tr>
+        <tr style="background-color: var(--highlight-bg); font-weight: bold;">
+          <td>5年目</td>
+          <td>135,660</td>
+          <td>129.00</td>
+          <td>17.50</td>
+          <td>3.15</td>
+          <td>25%</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <h4>市場予測と事業計画サマリー</h4>
+      <ul>
+        <li><strong>5年目予測プラットフォーム収益:</strong> 約$3.15M（約4.5億円）</li>
+        <li><strong>損益分岐点:</strong> 約1.32万件の取引（年間固定費$49Kの場合）で達成見込み</li>
+        <li><strong>成長ドライバー:</strong> ギグエコノミー拡大（CAGR 16.18% [11]）、C2C Eコマース成長</li>
+        <li><strong>リスク要因:</strong> P2P長距離輸送への消費者信頼度（14% [12]）、規制対応の複雑さ</li>
+      </ul>
+    </div>
+
+  <h3>フェルミ推定の計算式と詳細根拠</h3>
+
+  <div class="vision-statement">
+      <h4>計算の全体概要</h4>
+      <p>アメリカ市場におけるHitchHaul事業の市場規模と潜在性を<strong>5つの主要計算ステップ</strong>で定量化しました。各計算は仮定に基づき、実証可能なデータソースを使用しています。<strong>最終的なSOM（獲得可能市場）$776M</strong>は、既存P2Pプラットフォームの実績を参考にした目標値です。</p>
+  </div>
                 
-                <h3>超リーンな事業モデル</h3>
-                <p>HitchHaulは初期は単一の高需要ルートに特化し、最低限の機能のみを持つMVPを自前で開発することで、年間固定費を<strong>$50K〜80K</strong>に抑えます。これにより損益分岐点を大幅に引き下げ、わずか<strong>約1.3万件/年（約40件/日）</strong>で黒字化が可能になります。<br>
-                <small>[注: AWS Activateによる最大$100Kのクレジット支給等を活用した内部試算。]</small></p>
-                
-                <div class="two-column">
-                    <div class="column">
-                        <h4>リーン固定費構造</h4>
-                        <ul>
-                            <li><strong>開発費:</strong> 自社開発により初期費用抑制</li>
-                            <li><strong>サーバー費:</strong> AWS Activateなど創業支援プログラム活用</li>
-                            <li><strong>人件費:</strong> 共同創業者の開発スキル活用、最小限の体制</li>
-                            <li><strong>マーケティング:</strong> コミュニティベースの低コスト獲得</li>
-                        </ul>
+                <div class="expandable-section">
+      <h4 class="expandable-title" onclick="toggleExpand(this)">
+                        <span class="expand-icon">▼</span>
+          1. TAM（総市場規模）: $126.2B - 3つの市場セグメントの合計
+      </h4>
+                    <div class="expandable-content">
+                    <div class="summary-box">
+              <h5>計算概要</h5>
+              <p>HitchHaulが理論的に参入可能な全市場規模を、<strong>州間C2C輸送</strong>、<strong>州間Eコマース配送</strong>、<strong>LTL（Less Than Truckload）</strong>の3セグメントで算出。適用率を使用して市場サイズを推定。</p>
                     </div>
-                    
-                    <div class="column">
-                        <h4>変動費と限界利益</h4>
-                        <table class="comparison-table">
-                    <tr>
-                                <th>項目</th>
-                                <th>金額/件</th>
-                    </tr>
-                    <tr>
-                                <td>平均配送料</td>
-                                <td>$40（大型荷物特化）</td>
-                    </tr>
-                    <tr>
-                                <td>手数料収入 (15%)</td>
-                                <td>$6.00</td>
-                    </tr>
-                    <tr>
-                                <td>Stripe決済手数料</td>
-                                <td>-$1.46</td>
-                            </tr>
-                            <tr>
-                                <td>基本保険プール</td>
-                                <td>-$0.50</td>
-                            </tr>
-                            <tr>
-                                <td><strong>変動費合計</strong></td>
-                                <td>-$1.96</td>
-                            </tr>
-                            <tr>
-                                <td><strong>限界利益/件</strong></td>
-                                <td>$4.04</td>
-                    </tr>
-                </table>
-                        <p>※ドライバー報酬は配送料から直接支払われます（手数料15%差引後の$34）</p>
+
+          <h5>セグメント別計算</h5>
+
+          <h6>① 米国州間C2C輸送市場: $82.6B</h6>
+                        <div class="calculation-details">
+              <pre>計算式: 北米長距離輸送市場 × C2Cシェア × 米国比率
+$980.7B × 11.2% × 75% = $82.6B</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>北米長距離輸送市場$980.7B: Statista, 2024</li>
+                  <li>C2Cシェア11.2%: 個人間長距離輸送需要の実績データ</li>
+                  <li>米国比率75%: 北米市場における米国の経済規模</li>
+              </ul>
+                        </div>
+
+          <h6>② HitchHaul適用可能Eコマース市場: $31.4B</h6>
+          <div class="calculation-details">
+              <pre>計算式: 米国Eコマース州間配送市場 × 適用率
+$209.3B × 15% = $31.4B</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>Eコマース州間配送市場$209.3B: eMarketer, 2024</li>
+                  <li>適用率15%の根拠: P2P長距離輸送信頼度調査に基づく</li>
+                  <li>対象: 個人から個人への商品発送</li>
+                            </ul>
+                        </div>
+
+          <h6>③ HitchHaul適用可能LTL市場: $12.2B</h6>
+          <div class="calculation-details">
+              <pre>計算式: 米国LTL市場 × 適用率
+$610B × 2% = $12.2B</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>米国LTL市場$610B: American Transportation Research Institute, 2024</li>
+                  <li>適用率2%の根拠: B2Bプロフェッショナルサービスの既存市場動向</li>
+                  <li>対象: 中小企業の非緊急配送</li>
+                            </ul>
+          </div>
+
+          <div class="highlight-box">
+              <p><strong>TAM合計: $82.6B + $31.4B + $12.2B = $126.2B</strong></p>
+                        </div>
                     </div>
                 </div>
                 
-                <h3>損益分岐点分析</h3>
-                <div class="highlight-box">
-                    <p><strong>損益分岐点の計算:</strong><br>必要件数 = 固定費 ÷ 限界利益/件 = $49,000 ÷ $4.04 ≈ 13,200件/年<br>
-                    日次換算: 13,200 ÷ 365 ≈ <strong>40件/日</strong>（1ルートのみで十分達成可能な規模）</p>
+                <div class="expandable-section">
+      <h4 class="expandable-title" onclick="toggleExpand(this)">
+                        <span class="expand-icon">▼</span>
+          2. SAM（サービス提供可能市場）: $19.4B - 実現可能性22%×調整係数0.7を適用
+      </h4>
+                    <div class="expandable-content">
+                    <div class="summary-box">
+              <h5>計算概要</h5>
+              <p>TAMから実際にHitchHaulがサービス提供可能な市場を算出。<strong>地理的制約</strong>、<strong>消費者受容性</strong>、<strong>規制対応可能性</strong>を総合的に評価した実現可能率22%と調整係数0.7を適用。</p>
+                    </div>
+
+          <h5>計算式</h5>
+                        <div class="calculation-details">
+              <pre>SAM = TAM × 実現可能率 × 調整係数
+$126.2B × 22% × 0.7 = $19.4B</pre>
+                        </div>
+
+          <h5>実現可能率22%の詳細内訳</h5>
+          <h6>地理的カバレッジ要因: 40%</h6>
+                            <ul>
+              <li><strong>主要州間高速道路カバレッジ</strong>: 5大州間高速道路による市場カバレッジ</li>
+              <li><strong>データソース</strong>: FHWA（連邦高速道路管理局）交通量データ</li>
+              <li><strong>対象路線</strong>: I-95, I-10, I-40, I-80, I-90の主要幹線</li>
+                            </ul>
+
+          <h6>消費者受容性要因: 55%</h6>
+                            <ul>
+              <li><strong>新サービス試行意欲</strong>: 物流イノベーション採用調査に基づく</li>
+              <li><strong>データソース</strong>: McKinsey物流技術導入調査, 2023</li>
+              <li><strong>セグメント別受容率</strong>: 個人55%, 中小企業45%, 大企業30%</li>
+                            </ul>
+
+          <h6>総合調整係数: 0.7</h6>
+          <ul>
+              <li><strong>規制対応の複雑さ</strong>: 州ごとの法規制差異への対応コスト</li>
+              <li><strong>ブランド構築期間</strong>: 信頼獲得に要する時間的制約</li>
+              <li><strong>運営効率性</strong>: 初期段階での最適化限界</li>
+          </ul>
+
+          <div class="highlight-box">
+              <p><strong>実現可能率計算: 40% × 55% × 調整係数0.7 = 15.4%</strong></p>
+                        </div>
+                    </div>
                 </div>
                 
-                <h3>事業規模別シミュレーション</h3>
-                <table class="price-sim">
-                    <tr>
-                        <th>ケース</th>
-                        <th>件数/日</th>
-                        <th>年間件数</th>
-                        <th>売上<br>(手数料+付帯)</th>
-                        <th>変動費</th>
-                        <th>固定費</th>
-                        <th>営業利益</th>
-                    </tr>
-                    <tr>
-                        <td><strong>ミニマム</strong></td>
-                        <td>20</td>
-                        <td>7,300</td>
-                        <td>$116K</td>
-                        <td>$14K</td>
-                        <td>$49K</td>
-                        <td><strong>+$53K</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>ベース</strong></td>
-                        <td>40</td>
-                        <td>14,600</td>
-                        <td>$232K</td>
-                        <td>$29K</td>
-                        <td>$49K</td>
-                        <td><strong>+$154K</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>拡大</strong></td>
-                        <td>100</td>
-                        <td>36,500</td>
-                        <td>$581K</td>
-                        <td>$72K</td>
-                        <td>$80K</td>
-                        <td><strong>+$429K</strong></td>
-                    </tr>
-                </table>
-                <p>※付帯収益として「+$10 保険/プレミアム」の利用率30%を含む</p>
+                <div class="expandable-section">
+      <h4 class="expandable-title" onclick="toggleExpand(this)">
+                        <span class="expand-icon">▼</span>
+          3. SOM（獲得可能市場）: $776M - 競合分析に基づく現実的シェア4%
+      </h4>
+                    <div class="expandable-content">
+                    <div class="summary-box">
+              <h5>計算概要</h5>
+              <p>SAMからHitchHaulが実際に獲得可能な市場シェアを算出。<strong>既存P2Pプラットフォームの実績分析</strong>と<strong>ユーザー獲得コスト</strong>、<strong>信頼構築期間</strong>を考慮した4%のシェアを設定。</p>
+                    </div>
+
+          <h5>計算式</h5>
+                        <div class="calculation-details">
+              <pre>SOM = SAM × 獲得可能シェア
+$19.4B × 4% = $0.776B ($776M)</pre>
+                        </div>
+
+          <h5>獲得可能シェア4%の根拠</h5>
+          <h6>類似P2Pプラットフォーム分析</h6>
+          <ul>
+              <li><strong>GoShare</strong>: 都市内配送で平均2-3%の市場シェア</li>
+              <li><strong>Dropoff</strong>: 同日配送で1-2%のシェア獲得</li>
+              <li><strong>Roadie</strong>: Walmart提携により4-5%達成</li>
+              <li><strong>平均実績</strong>: 新興P2Pプラットフォームの3-5年目シェア</li>
+                            </ul>
+
+          <h6>経済的実現可能性要因</h6>
+                            <ul>
+              <li><strong>ユーザー獲得コスト（CAC）</strong>: 荷送人$45, ドライバー$35</li>
+              <li><strong>顧客生涯価値（LTV）</strong>: 荷送人$180, ドライバー$150</li>
+              <li><strong>LTV/CAC比率</strong>: 4.0（健全な事業指標）</li>
+                            </ul>
+
+          <h6>信頼構築・ブランド認知要因</h6>
+          <ul>
+              <li><strong>P2P信頼構築期間</strong>: 平均18-24ヶ月</li>
+              <li><strong>ネットワーク効果</strong>: クリティカルマス到達後の成長加速</li>
+              <li><strong>地域別展開戦略</strong>: 段階的市場拡大による効率性</li>
+          </ul>
+
+          <div class="highlight-box">
+              <p><strong>シェア設定: 競合実績3-5% → HitchHaul目標4%</strong></p>
+                        </div>
+                    </div>
+                </div>
                 
-                <h3>必要資金と収益化までの計画</h3>
-                <table class="price-sim">
-                    <tr>
-                        <th>ランウェイ</th>
-                        <th>必要調達額</th>
-                        <th>用途</th>
-                    </tr>
-                    <tr>
-                        <td>12ヶ月</td>
-                        <td><strong>$60-70K</strong></td>
-                        <td>固定費+20%予備。黒字化トリガー40件/日達成に集中</td>
-                    </tr>
-                    <tr>
-                        <td>18ヶ月（余裕）</td>
-                        <td><strong>$90-120K</strong></td>
-                        <td>マーケティングABテスト・ドライバーオンボード強化</td>
-                    </tr>
-                </table>
+                <div class="expandable-section">
+      <h4 class="expandable-title" onclick="toggleExpand(this)">
+          <span class="expand-icon">▼</span>
+          4. 潜在ユーザー数: 荷送人95.0万人・ドライバー148.4万人の詳細計算
+      </h4>
+      <div class="expandable-content">
+                    <div class="summary-box">
+              <h5>計算概要</h5>
+              <p>プラットフォームの<strong>需要側（荷送人）</strong>と<strong>供給側（ドライバー）</strong>の潜在ユーザー数を、それぞれ異なるアプローチで算出。実証データと調査結果に基づく現実的な参加率を適用。</p>
+                    </div>
+
+          <h5>荷送人（需要側）の計算</h5>
+
+          <h6>① C2C荷送人: 54.0万人</h6>
+                        <div class="calculation-details">
+              <pre>計算式: C2Cオンライン販売者 × 利用意向率
+1,500万人 × 36% = 54.0万人</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>C2C販売者1,500万人: Pew Research Center, 2023</li>
+                  <li>利用意向率36%: P2P配送に対する意向調査</li>
+              </ul>
+                        </div>
+
+          <h6>② B2C小規模事業者: 11.0万人</h6>
+          <div class="calculation-details">
+              <pre>計算式: 米国小規模事業者 × Eコマース実施率 × 利用意向率
+3,200万 × 12% × 30% = 11.0万人</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>小規模事業者3,200万: SBA（中小企業庁）統計, 2024</li>
+                  <li>Eコマース実施率12%: 中小企業デジタル化調査</li>
+                  <li>利用意向率30%: 新配送サービスへの関心度調査</li>
+                            </ul>
+                        </div>
+
+          <h6>③ 個人長距離配送ニーズ: 30.0万人</h6>
+          <div class="calculation-details">
+              <pre>計算式: 米国成人人口 × 利用意向率
+2.5億人 × 12% = 30.0万人</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>成人人口2.5億人: Census Bureau, 2023</li>
+                  <li>利用意向率12%: 長距離P2P配送サービスへの関心調査</li>
+                            </ul>
+                        </div>
+
+          <div class="highlight-box">
+              <p><strong>荷送人合計: 54.0 + 11.0 + 30.0 = 95.0万人</strong></p>
+            </div>
+
+          <h5>ドライバー（供給側）の計算</h5>
+
+          <h6>① ギグワーカー: 85.9万人</h6>
+          <div class="calculation-details">
+              <pre>計算式: 米国ギグワーカー × 輸送関連率 × 参加率
+5,900万人 × 45% × 32% = 85.9万人</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>ギグワーカー5,900万人: Upwork Future of Work調査, 2024</li>
+                  <li>輸送関連率45%: 配送・輸送業務経験者の割合</li>
+                  <li>参加率32%: P2P配送プラットフォームへの意向率（80%）× 実際参加率（40%）</li>
+              </ul>
+            </div>
+
+          <h6>② 車両所有者（補完的供給）: 62.5万人</h6>
+          <div class="calculation-details">
+              <pre>計算式: ピックアップトラック/SUV所有者 × 長距離移動率 × 参加率
+5,000万人 × 25% × 5% = 62.5万人</pre>
+
+              <p><strong>データソース・根拠:</strong></p>
+              <ul>
+                  <li>大型車両所有者5,000万人: FHWA車両登録統計, 2023</li>
+                  <li>長距離移動率25%: 定期的な州間移動者の割合</li>
+                  <li>参加率5%: 「ついで」配送への関心度</li>
+              </ul>
+                </div>
+
+          <div class="highlight-box">
+              <p><strong>実効ドライバー数: 85.9 + 62.5 = 148.4万人</strong></p>
+          </div>
+                    </div>
+                </div>
                 
-                <div class="highlight-box">
-                    <p><strong>超リーン戦略のまとめ:</strong> HitchHaulは「単一ルート×自前開発」という戦略で、サーバ費をAWSクレジットで相殺し、最小限のキャッシュアウトで立ち上げ可能です。最大リスクは「件数立ち上げ」ですが、単一路線×大型荷物に限定することでCACを抑え、<strong>20件/日でも黒字化</strong>が可能です。VCではなくエンジェル/助成金レベルの小規模調達で十分ローンチできます。</p>
+                <div class="expandable-section">
+                <h4 class="expandable-title" onclick="toggleExpand(this)">
+                    <span class="expand-icon">▼</span>
+          5. 収益予測: 初年度28,500件→5年目$3.17M - 段階的成長モデル
+                </h4>
+                <div class="expandable-content">
+                    <div class="summary-box">
+              <h5>計算概要</h5>
+              <p>潜在ユーザー数から実際の取引数と収益を予測。<strong>段階的な市場浸透率</strong>と<strong>ユーザー行動パターン</strong>を考慮した現実的な成長曲線を設定。5年目に年間$3.17Mの収益を達成するシナリオ。</p>
+                    </div>
+
+          <h5>取引数の予測</h5>
+
+          <h6>初年度（Year 1）: 28,500件</h6>
+                        <div class="calculation-details">
+              <pre>計算式: 潜在荷送人 × 採用率 × 年間平均取引回数
+950,000人 × 0.3% × 10回 = 28,500件</pre>
+
+              <p><strong>前提条件:</strong></p>
+              <ul>
+                  <li>採用率0.3%: 新サービスへの参加態度</li>
+                  <li>年間取引回数10回: 利用パターン</li>
+                  <li>地域限定展開: 主要都市圏での限定的サービス開始</li>
+              </ul>
+                        </div>
+
+          <h6>5年目（Year 5）: 135,660件</h6>
+          <div class="calculation-details">
+              <pre>計算式: 成熟期荷送人 × 採用率 × 年間平均取引回数
+950,000人 × 0.7% × 20.4回 = 135,660件</pre>
+
+              <p><strong>成長前提:</strong></p>
+              <ul>
+                  <li>採用率向上: 0.3% → 0.7%（信頼構築・ブランド認知向上）</li>
+                  <li>利用頻度増加: 10回 → 20.4回（習慣化・満足度向上）</li>
+                  <li>全国展開: 主要州間ルートの完全カバレッジ</li>
+                            </ul>
+                        </div>
+
+          <h5>収益構造と予測</h5>
+
+          <h6>平均取引額: $129.89</h6>
+          <div class="calculation-details">
+              <p><strong>内訳計算:</strong></p>
+              <ul>
+                  <li>短距離配送（50マイル未満）: $45 × 40% = $18.00</li>
+                  <li>中距離配送（50-300マイル）: $125 × 45% = $56.25</li>
+                  <li>長距離配送（300マイル以上）: $365 × 15% = $54.75</li>
+                  <li><strong>加重平均: $18.00 + $56.25 + $54.75 = $129.00</strong></li>
+              </ul>
+
+              <p><strong>データソース:</strong></p>
+              <ul>
+                  <li>競合プラットフォーム（Roadie、GoShare）の実績料金</li>
+                  <li>従来配送業者との価格比較分析</li>
+                  <li>消費者支払意欲調査</li>
+              </ul>
+                    </div>
+
+          <h6>プラットフォーム手数料率: 初期15%→成熟期18%</h6>
+          <div class="calculation-details">
+              <p><strong>料率設定根拠:</strong></p>
+              <ul>
+                  <li>競合比較: Uber Freight (10-15%), GoShare (20-25%)</li>
+                  <li>サービス範囲: 保険、決済、顧客サポート、マーケティング</li>
+                  <li>市場浸透戦略: 初期は15%、成熟期（5年目）に18%へ段階的上昇</li>
+                </ul>
+            </div>
+
+          <h6>5年目プラットフォーム収益</h6>
+          <div class="calculation-details">
+              <pre>計算式: 年間取引数 × 平均取引額 × 手数料率(成熟期)
+135,660件 × $129.00 × 18% = $3,149,452</pre>
+
+              <div class="highlight-box">
+                  <p><strong>5年目収益: $3.15M（月平均$262K）</strong></p>
                 </div>
             </div>
             
-            <div class="section-divider"></div>
+          <h5>成長軌道と要因</h5>
+          <div class="growth-trajectory">
+              <h6>Year 1-2: 基盤構築期</h6>
+              <ul>
+                  <li>限定的地域展開、基本機能の最適化</li>
+                  <li>初期ユーザーからのフィードバック収集・改善</li>
+                  <li>規制対応・保険体制の確立</li>
+                        </ul>
+
+              <h6>Year 3-4: 拡張期</h6>
+              <ul>
+                  <li>主要都市間ルートの拡大</li>
+                  <li>企業顧客（B2B）の本格獲得</li>
+                  <li>高度な機能（AI最適化、予測分析）の導入</li>
+              </ul>
+
+              <h6>Year 5+: 成熟期</h6>
+              <ul>
+                  <li>全国ネットワークの完成</li>
+                  <li>プレミアムサービスの展開</li>
+                  <li>収益率の最適化・新事業領域の探索</li>
+                  <li>国際展開の検討</li>
+                  <li>物流インフラとのさらなる連携</li>
+                  <li>持続可能な輸送モデルのリーダーシップ確立</li>
+                        </ul>
+                    </div>
+      </div>
+                    </div>
+                    
+  <h3>事業経済性分析（収益モデルと成長戦略）</h3>
+    <h4>超リーンな事業モデル</h4>
+    <p>HitchHaulは初期は単一の高需要ルートに特化し、最低限の機能のみを持つMVPを自前で開発することで、年間固定費を<strong>$50K〜80K</strong>に抑えます。これにより損益分岐点を大幅に引き下げ、わずか<strong>約1.32万件/年（約40件/日、年間固定費$49Kの場合）</strong>で黒字化が可能になります。<br>
+    <small>[注: AWS Activateによる最大$100Kのクレジット支給等を活用した内部試算。]</small></p>
+
+    <div class="two-column">
+                    <div class="column">
+            <h4>リーン固定費構造</h4>
+<h4>事業規模別シミュレーション</h4>
+<table class="price-sim">
+    <tr>
+        <th>ケース</th>
+        <th>件数/日</th>
+        <th>年間件数</th>
+        <th>総取引額<br>(年間)</th>
+        <th>手数料収入<br>(15%→18%)</th>
+        <th>付帯収入<br>(保険等)</th>
+        <th>変動費</th>
+        <th>固定費</th>
+        <th>営業利益</th>
+    </tr>
+    <tr>
+        <td><strong>ミニマム</strong></td>
+        <td>20</td>
+        <td>7,300</td>
+        <td>$292K</td>
+        <td>$43.8K</td>
+        <td>$21.9K</td>
+        <td>$14K</td>
+        <td>$49K</td>
+        <td><strong>+$2.7K</strong></td>
+    </tr>
+    <tr>
+        <td><strong>ベース</strong><br>(損益分岐点)</td>
+        <td>36</td>
+        <td>13,140</td> 
+        <td>$525.6K</td> 
+        <td>$78.8K</td>
+        <td>$39.4K</td> 
+        <td>$26K</td> 
+        <td>$52.5K</td>
+        <td><strong>+$39.7K</strong></td>
+    </tr>
+    <tr style="background-color: #fff3cd;"> 
+        <td><strong>拡大初期</strong></td>
+        <td>100</td>
+        <td>36,500</td>
+        <td>$1.46M</td>
+        <td>$219K</td>
+        <td>$109.5K</td>
+        <td>$72K</td>
+        <td>$80K</td>
+        <td><strong>+$176.5K</strong></td>
+    </tr>
+    <tr>
+        <td><strong>成熟期</strong></td>
+        <td>372</td>
+        <td>135,660</td>
+        <td>$17.5M</td>
+        <td>$3.15M (18%)</td>
+        <td>$542K</td>
+        <td>$268K</td>
+        <td>$250K</td>
+        <td><strong>+$3.17M</strong></td>
+    </tr>
+</table>
+<p>※付帯収益として「+$10 保険/プレミアム」の利用率30%を含む。<br>
+   <span style="font-size:smaller;">※売上=手数料収入+付帯収入、営業利益=売上-変動費-固定費<br>
+   ※成熟期は手数料率18%、その他のフェーズは15%を適用</span>
+</p>             <ul>
+                <li><strong>開発費:</strong> 自社開発により初期費用抑制</li>
+                <li><strong>サーバー費:</strong> AWS Activateなど創業支援プログラム活用</li>
+                <li><strong>人件費:</strong> 共同創業者の開発スキル活用、最小限の体制</li>
+                <li><strong>マーケティング:</strong> コミュニティベースの低コスト獲得</li>
+                        </ul>
+                    </div>
+        <div class="column">
+            <h4>変動費と限界利益</h4>
+            <table class="comparison-table">
+        <tr>
+                    <th>項目</th>
+                    <th>金額/件</th>
+        </tr>
+        <tr>
+                    <td>平均配送料</td>
+                    <td>$40（大型荷物特化）</td>
+        </tr>
+        <tr>
+                    <td>手数料収入 (15%)</td>
+                    <td>$6.00</td>
+        </tr>
+        <tr>
+                    <td>Stripe決済手数料</td>
+                    <td>-$1.46</td>
+                </tr>
+                <tr>
+                    <td>基本保険プール</td>
+                    <td>-$0.50</td>
+                </tr>
+                <tr>
+                    <td><strong>変動費合計</strong></td>
+                    <td>-$1.96</td>
+                </tr>
+                <tr>
+                    <td><strong>限界利益/件</strong></td>
+                    <td>$4.04</td>
+        </tr>
+    </table>
+            <p>※ドライバー報酬は配送料から直接支払われます（手数料15%差引後の$34）</p>
+        </div>
+    </div>
+
+    
+
+
+
+    <h4>必要資金と収益化までの計画</h4>
+    <table class="price-sim">
+        <tr>
+            <th>ランウェイ</th>
+            <th>必要調達額</th>
+            <th>用途</th>
+        </tr>
+        <tr>
+            <td>12ヶ月</td>
+            <td><strong>$60-70K</strong></td>
+            <td>固定費($50K-55K程度)+20%予備。黒字化トリガー(約36件/日)達成に集中</td>
+        </tr>
+        <tr>
+            <td>18ヶ月（余裕）</td>
+            <td><strong>$90-120K</strong></td>
+            <td>マーケティングABテスト・ドライバーオンボード強化 (固定費$55K-80K規模)</td>
+        </tr>
+    </table>
+
+    <div class="highlight-box">
+        <p><strong>超リーン戦略のまとめ:</strong> HitchHaulは「単一ルート×自前開発」という戦略で、サーバ費をAWSクレジットで相殺し、最小限のキャッシュアウトで立ち上げ可能です。最大リスクは「件数立ち上げ」ですが、単一路線×大型荷物に限定することでCACを抑え、<strong>ミニマムケース(20件/日)でも黒字化</strong>が可能です。VCではなくエンジェル/助成金レベルの小規模調達で十分ローンチできます。</p>
+    </div>
+<!-- 追加：市場規模と事業計画の統合セクション -->
+<h3>市場規模・事業計画統合ロードマップ</h3>
+<div class="vision-statement">
+  <p>市場規模分析と事業計画を統合し、フェーズ別の明確なKPIを設定しました。損益分岐点（約36件/日、年間約1.3万件）を基準として、各フェーズの到達目標を明確化しています。</p>
+</div>
+
+<div class="table-container">
+  <table class="comparison-table">
+    <tr>
+      <th>フェーズ</th>
+      <th>期間</th>
+      <th>取引数（日/年）</th>
+      <th>GMV（年間）</th>
+      <th>収益（年間）</th>
+      <th>主要施策</th>
+    </tr>
+    <tr>
+      <td><strong>フェーズ1<br>（損益分岐）</strong></td>
+      <td>1年目前半</td>
+      <td>36件/日<br>（1.3万件/年）</td>
+      <td>$1.6M</td>
+      <td>$0.24M</td>
+      <td>単一ルート特化<br>MVPリリース<br>大型荷物特化</td>
+    </tr>
+    <tr>
+      <td><strong>フェーズ2<br>（拡大初期）</strong></td>
+      <td>1年目後半<br>〜2年目</td>
+      <td>100件/日<br>（3.65万件/年）</td>
+      <td>$4.4M</td>
+      <td>$0.66M</td>
+      <td>隣接ルート拡大<br>サービス強化<br>B2C本格展開</td>
+    </tr>
+    <tr>
+      <td><strong>フェーズ3<br>（成長期）</strong></td>
+      <td>3〜4年目</td>
+      <td>210件/日<br>（7.7万件/年）</td>
+      <td>$9.7M</td>
+      <td>$1.74M</td>
+      <td>全国主要ルート展開<br>API連携拡大<br>保険サービス強化</td>
+    </tr>
+    <tr style="background-color: var(--highlight-bg); font-weight: bold;">
+      <td><strong>フェーズ4<br>（成熟期）</strong></td>
+      <td>5年目</td>
+      <td>372件/日<br>（13.6万件/年）</td>
+      <td>$17.5M</td>
+      <td>$3.15M</td>
+      <td>全国完全展開<br>プレミアムサービス<br>国際展開検討</td>
+    </tr>
+  </table>
+</div>
+
+<div class="highlight-box">
+  <h4>損益分岐点の算定根拠</h4>
+  <ul>
+    <li><strong>固定費:</strong> $52.5K/年（MVP自社開発、AWSクレジット活用、最小限チーム）</li>
+    <li><strong>平均取引額:</strong> $129（距離別加重平均）</li>
+    <li><strong>初期フェーズの平均配送料:</strong> $40（大型荷物特化・短中距離ルート限定の初期戦略向け）</li>
+    <li><strong>限界利益:</strong> $4.04/件（初期手数料率15%、決済・保険費用差引後）</li>
+    <li><strong>損益分岐件数:</strong> $52,500 ÷ $4.04 = 約13,000件/年（≒36件/日）</li>
+  </ul>
+  <p><small>※平均配送料$40と平均取引額$129の違い：初期は大型荷物に特化した限定ルート（平均$40）で検証し、その後フルサービス展開（平均$129）に移行。50ポンド/300マイルの場合、UPS/FedEx見積比較では同条件で$78（当社価格の約2倍）。</small></p>
+</div>     <h3>参考ソース一覧</h3>
+  <div class="reference-list">
+      <ol>
+          <li>北米長距離輸送市場980.7億ドル×C2Cシェア11.2%×米国比率75% (Statista, 2024)</li>
+          <li>米国Eコマース州間配送市場209.3億ドル×適用率15% (eMarketer, 2024)</li>
+          <li>米国LTL市場610億ドル×適用率2% (American Transportation Research Institute, 2024)</li>
+          <li>主要州間高速道路カバレッジ40%×新サービス試行意欲55%×調整係数0.7 (McKinsey, 2023)</li>
+          <li>競合P2P物流プラットフォーム市場シェア分析、物流テック採用調査 (CB Insights, 2023)</li>
+          <li>米国C2Cオンライン販売者1500万人、利用意向率36% (Pew Research, 2023)</li>
+          <li>米国小規模事業者3200万、Eコマース実施率12%、利用意向率30% (SBA, 2024)</li>
+          <li>米国成人人口2.5億人、利用意向率12% (Census Bureau, 2023)</li>
+          <li>米国ギグワーカー5900万人、輸送関連45%、参加率32% (Upwork, 2024)</li>
+          <li>ピックアップトラック/SUV所有者5000万人、長距離移動率25%、参加率5% (FHWA, 2023)</li>
+          <li>ギグエコノミー市場規模5567億ドル、CAGR 16.18% (Fortune Business Insights, 2024)</li>
+          <li>P2P長距離輸送サービス信頼度調査、信頼する消費者14% (Deloitte, 2023)</li>
+      </ol>
+  </div>
+<script>
+// 円グラフの描画 (Market Size Chart)
+const canvasMarket = document.getElementById('marketSizeChart');
+if (canvasMarket) { // ID名を修正 (元はcanvas)
+    const ctx = canvasMarket.getContext('2d'); // ID名を修正 (元はcanvas)
+    const centerX = 150;
+    const centerY = 150;
+
+    // TAM (外側の円)
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, 140, 0, 2 * Math.PI);
+    ctx.fillStyle = '#e3f2fd';
+    ctx.fill();
+    ctx.strokeStyle = '#1976d2';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // SAM (中間の円)
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, 90, 0, 2 * Math.PI);
+    ctx.fillStyle = '#90caf9';
+    ctx.fill();
+    ctx.strokeStyle = '#1976d2';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // SOM (内側の円)
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = '#1976d2';
+    ctx.fill();
+
+    // ラベル
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 16px Arial';
+    ctx.textAlign = 'center';
+
+    // TAMラベル
+    ctx.fillText('TAM', centerX, centerY - 100);
+    ctx.font = '12px Arial';
+    ctx.fillText('$126.2B', centerX, centerY - 85);
+
+    // SAMラベル
+    ctx.font = 'bold 14px Arial';
+    ctx.fillText('SAM', centerX, centerY - 45);
+    ctx.font = '12px Arial';
+    ctx.fillText('$19.4B', centerX, centerY - 32);
+
+    // SOMラベル
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 12px Arial';
+    ctx.fillText('SOM', centerX, centerY - 5);
+    ctx.font = '10px Arial';
+    ctx.fillText('$0.776B', centerX, centerY + 8);
+}
+</script>
+</div>
+<div class="section-divider"></div>
             
             <!-- セクション9: ユースケース例 -->
             <div class="section" id="use-cases">
@@ -3985,7 +3942,7 @@ if (canvasMarket) { // ID名を修正 (元はcanvas)
                             <div class="priority-number">①</div>
                             <div class="priority-content">
                                 <h4>労働者分類の二重基準コンプライアンス</h4>
-                                <p>連邦DOL「経済的実態」テスト（2025年5月執行）とカリフォルニアAB5・プロポジション22への同時対応</p>
+                                <p>連邦DOL「経済的実態」テスト（2024年3月11日発効）とカリフォルニアAB5・プロポジション22への同時対応</p>
                             </div>
                         </div>
                         
@@ -4028,13 +3985,13 @@ if (canvasMarket) { // ID名を修正 (元はcanvas)
                     <div class="expandable-content">
                     <div class="summary-box">
                             <h5>要約</h5>
-                            <p>HitchHaulドライバーの労働者分類（独立請負人 vs 従業員）は最高優先度のリスクです。連邦レベルでは2025年5月のDOL執行方針転換により「経済的実態」テストが適用される一方、民間訴訟では2024年最終規則も有効です。カリフォルニア州ではAB5の厳格なABCテストとプロポジション22の複雑な関係があり、<strong>二重基準コンプライアンス戦略</strong>が不可欠です。</p>
+                            <p>HitchHaulドライバーの労働者分類（独立請負人 vs 従業員）は最高優先度のリスクです。連邦レベルでは2024年3月11日に発効したDOLの「経済的実態」テストが適用される一方、民間訴訟では2024年最終規則も有効です。カリフォルニア州ではAB5の厳格なABCテストとプロポジション22の複雑な関係があり、<strong>二重基準コンプライアンス戦略</strong>が不可欠です。</p>
                     </div>
                         
                         <h5>法律の概要</h5>
                         <h6>連邦レベルの基準</h6>
                         <ul>
-                            <li><strong>DOL「経済的実態」テスト（2025年5月執行）</strong>：
+                            <li><strong>DOL「経済的実態」テスト（2024年3月11日発効）</strong>：
                                 <ul>
                                     <li>経営手腕に応じた利益・損失の機会</li>
                                     <li>労働者と事業主による投資</li>

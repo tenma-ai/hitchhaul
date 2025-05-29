@@ -1,0 +1,18 @@
+// 目次リストを実際のスライド順序に合わせて修正
+<ul class="toc-list" id="tocList">
+    <li class="toc-item" data-target="title">タイトル</li>
+    <li class="toc-item" data-target="overview">概要</li>
+    <li class="toc-item" data-target="problems">解決する課題</li>
+    <li class="toc-item" data-target="why-america">なぜアメリカ市場なのか</li>
+    <li class="toc-item" data-target="comparison">大手配送業社との比較</li>
+    <li class="toc-item" data-target="pricing">実際の配送料金シミュレーション</li>
+    <li class="toc-item" data-target="driver-income">ドライバー収入シミュレーション</li>
+    <li class="toc-item" data-target="pricing-graph">配送料金グラフシミュレーション</li>
+    <li class="toc-item" data-target="driver-income-graph">ドライバー収入グラフシミュレーション</li>
+    <li class="toc-item" data-target="competitive-analysis">HitchHaul競合分析：市場機会と戦略的示唆</li>
+    <li class="toc-item" data-target="market-forecast">市場規模・ユーザー数予測・事業経済性</li>
+    <li class="toc-item" data-target="use-cases">ユースケース例</li>
+    <li class="toc-item" data-target="app-features">アプリの機能とユーザーフロー</li>
+    <li class="toc-item" data-target="challenges">考えられる課題とその対策</li>
+    <li class="toc-item" data-target="legal">法律面の問題とその対策</li>
+</ul>
