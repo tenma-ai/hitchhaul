@@ -463,25 +463,15 @@
         }
         
         .toc-button {
-        .toc-button {
             background: none;
             border: none;
             color: white;
             font-size: 24px;
-            padding: 15px;
+            padding: 0 10px;
             cursor: pointer;
             transition: transform 0.2s ease;
-            min-width: 60px;
-            min-height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            touch-action: manipulation;
         }
         
-        .toc-button i {
-            font-size: 28px;
-        }         
         .toc-button:hover {
             transform: scale(1.1);
         }
@@ -1559,7 +1549,7 @@
     <!-- 目次ヘッダー -->
     <div class="toc-header">
         <h1 class="toc-title"><img src="hitchhaul_logowithtext.png" alt="HitchHaul" class="hitchhaul-logo"></h1>
-        <button class="toc-button" id="tocButton" aria-label="メニュー"><i class="fas fa-bars"></i></button>
+        <button class="toc-button" id="tocButton" aria-label="メニュー" style="cursor: pointer; min-width: 44px; min-height: 44px;"><i class="fas fa-bars"></i></button>
     </div>
     
     <!-- 目次ドロワー -->
@@ -1787,669 +1777,7 @@
             </div>
             
             <div class="section-divider"></div>
-
-            <!-- セクション5: 大手配送業社との比較 -->
-            <div class="section" id="comparison">
-                <h2>大手配送業社との比較</h2>
-                
-                <div class="table-container">
-                <table class="comparison-table">
-                    <tr>
-                            <th></th>
-                            <th>UPS</th>
-                            <th>FedEx</th>
-                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
-                    </tr>
-                    <tr>
-                        <td><strong>価格構造</strong></td>
-                        <td>高コスト基盤</td>
-                            <td>高コスト基盤</td>
-                            <td>50-80%の価格削減</td>
-                    </tr>
-                    <tr>
-                        <td><strong>配送速度</strong></td>
-                            <td>翌日〜数日</td>
-                        <td>翌日〜数日</td>
-                        <td>当日配送（4-8時間）</td>
-                    </tr>
-                    <tr>
-                        <td><strong>カバレッジ</strong></td>
-                            <td>広範なネットワーク</td>
-                        <td>広範なネットワーク</td>
-                        <td>州間移動経路に限定</td>
-                    </tr>
-                    <tr>
-                        <td><strong>大型荷物</strong></td>
-                            <td>最大150ポンド、割高で追加手数料</td>
-                            <td>最大150ポンド、割高で追加手数料</td>
-                            <td>最大サイズに柔軟対応（車両による）</td>
-                    </tr>
-                    <tr>
-                        <td><strong>受け渡し</strong></td>
-                            <td>固定的な時間設定</td>
-                        <td>固定的な時間設定</td>
-                        <td>カスタマイズ可能</td>
-                    </tr>
-                    <tr>
-                        <td><strong>環境負荷</strong></td>
-                        <td>専用車両による負荷</td>
-                            <td>専用車両による負荷</td>
-                            <td>既存移動の活用で33-50%の排出削減可能</td>
-                    </tr>
-                    <tr>
-                        <td><strong>追跡機能</strong></td>
-                        <td>標準的な追跡</td>
-                            <td>リアルタイム追跡可能</td>
-                        <td>リアルタイムGPS追跡</td>
-                    </tr>
-                </table>
-                </div>
-                
-                <div class="highlight-box">
-                    <p>HitchHaulは<strong>大幅な低コスト</strong>、<strong>高速配送</strong>、<strong>大型荷物対応</strong>、<strong>配送の柔軟性</strong>、<strong>環境負荷軽減</strong>という点で大手配送業社に対して明確な優位性を持っています。</p>
-                </div>
-            </div>
-            
-            <div class="section-divider"></div>
-            
-            <!-- セクション6: 実際の配送料金シミュレーション -->
-            <div class="section" id="pricing">
-                <h2>実際の配送料金シミュレーション</h2>
-                
-                <h3>大型荷物（70ポンド、18x18x18インチ）の配送時間比較</h3>
-                <div class="table-container">
-                <table class="price-sim">
-                    <tr>
-                        <th>ルート</th>
-                        <th>距離</th>
-                        <th>UPS Ground</th>
-                        <th>FedEx Ground</th>
-                        <th>USPS Ground</th>
-                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
-                    </tr>
-                    <tr>
-                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
-                        <td>10マイル</td>
-                        <td>1営業日</td>
-                        <td>1-2営業日</td>
-                        <td>2-5営業日</td>
-                        <td>当日<br>(1-3時間)</td>
-                    </tr>
-                    <tr>
-                        <td>LA→ラスベガス</td>
-                        <td>270マイル</td>
-                        <td>1営業日</td>
-                        <td>1-2営業日</td>
-                        <td>2-5営業日</td>
-                        <td>当日<br>(4-7時間)</td>
-                    </tr>
-                    <tr>
-                        <td>LA→NY</td>
-                        <td>2,800マイル</td>
-                        <td>4-5営業日</td>
-                        <td>4-5営業日</td>
-                        <td>2-5営業日</td>
-                        <td>2-3日<br>(移動時間に依存)</td>
-                    </tr>
-                </table>
-                </div>
-                
-                <h3>大型荷物（70ポンド、18x18x18インチ）の配送料金比較</h3>
-                <div class="table-container">
-                <table class="price-sim">
-                    <tr>
-                        <th>ルート</th>
-                        <th>距離</th>
-                        <th>UPS Ground</th>
-                        <th>FedEx Ground</th>
-                        <th>USPS Ground</th>
-                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
-                    </tr>
-                    <tr>
-                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
-                        <td>10マイル</td>
-                            <td>$60<br>(重量追加料金含む)</td>
-                            <td>$55<br>(重量追加料金含む)</td>
-                            <td>$60</td>
-                        <td>$15</td>
-                    </tr>
-                    <tr class="hitchhaul">
-                        <td>削減率</td>
-                        <td></td>
-                            <td>75%</td>
-                            <td>73%</td>
-                            <td>75%</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>LA→ラスベガス</td>
-                        <td>270マイル</td>
-                            <td>$100</td>
-                            <td>$90</td>
-                            <td>$110</td>
-                        <td>$25</td>
-                    </tr>
-                    <tr class="hitchhaul">
-                        <td>削減率</td>
-                        <td></td>
-                            <td>75%</td>
-                            <td>72%</td>
-                            <td>77%</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>LA→NY</td>
-                        <td>2,800マイル</td>
-                            <td>$160</td>
-                            <td>$120</td>
-                            <td>$220<br>(最大重量限界)</td>
-                        <td>$75</td>
-                    </tr>
-                    <tr class="hitchhaul">
-                        <td>削減率</td>
-                        <td></td>
-                            <td>53%</td>
-                            <td>38%</td>
-                            <td>66%</td>
-                        <td></td>
-                    </tr>
-                </table>
-                </div>
-                
-                <h3>時間価値を含めた総合コスト比較</h3>
-                <p>急ぎの配送における時間価値を考慮した場合（1日=$50と仮定）：</p>
-                
-                <table class="price-sim">
-                    <tr>
-                        <th>ルート</th>
-                        <th>距離</th>
-                        <th>従来サービス<br>平均総コスト*</th>
-                        <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"><br>総コスト*</th>
-                        <th>削減率</th>
-                    </tr>
-                    <tr>
-                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
-                        <td>10マイル</td>
-                        <td>$110</td>
-                        <td>$15</td>
-                        <td>86%</td>
-                    </tr>
-                    <tr>
-                        <td>LA→ラスベガス</td>
-                        <td>270マイル</td>
-                        <td>$150</td>
-                        <td>$25</td>
-                        <td>83%</td>
-                    </tr>
-                    <tr>
-                        <td>LA→NY</td>
-                        <td>2,800マイル</td>
-                        <td>$375</td>
-                        <td>$175</td>
-                        <td>53%</td>
-                    </tr>
-                </table>
-                <p>*総コスト = 配送料(平均値) + 時間価値($50/日)</p>
-                
-                <div class="highlight-box">
-                    <p>HitchHaulは特に<strong>大型荷物</strong>と<strong>時間価値を重視するユーザー</strong>に対して、<strong>圧倒的なコスト優位性</strong>を提供します。実際の料金を比較すると、当初の見積もりより更に大きな<strong>50〜80%のコスト削減</strong>が可能であることが分かります。これはUberがタクシー業界を変革したのと同様に、<strong>州間物流の概念を根本から変える</strong>潜在力を示しています。</p>
-                </div>
-                
-                <div class="two-column">
-                    <div class="column">
-                        <h3>HitchHaulのコスト優位性の詳細分析</h3>
-                        <ul>
-                            <li><strong>市内配送（約10マイル）:</strong> 従来の配送業者は70ポンドの大型荷物に対して50ポンド超過の追加手数料（約$25-30）を課すため、市内配送でも$55-60の高コスト。HitchHaulの$15との比較で<strong>70-80%のコスト削減</strong>を実現。</li>
-                            <li><strong>中距離配送（約270マイル）:</strong> LA→ラスベガスのような移動では、UPS/FedExは実際には$90-110の料金が発生。HitchHaulの$25は同じ移動をする一般ドライバーの「ついで配送」を活用することで<strong>70-77%の削減</strong>を実現。</li>
-                            <li><strong>長距離配送（約2,800マイル）:</strong> 大陸横断の配送では、USPSは70ポンド限界で$220前後、UPSは$160程度の高額料金。HitchHaulの$75で<strong>50-66%の削減</strong>を実現。</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column">
-                        <h3>HitchHaulの環境・時間的価値</h3>
-                        <ul>
-                            <li><strong>環境負荷軽減:</strong> 既存の移動をフル活用することで、類似サービスでは<strong>配送距離を33-50%削減（MITのReal-Time Ride-Sharing研究による）</strong>できることが実証済み。これは温室効果ガス排出量の大幅削減に直結。</li>
-                            <li><strong>速度の優位性:</strong> 特に中距離配送において顕著。LA→ラスベガスの場合、UPS/FedExの翌日配送と比較して、HitchHaulは<strong>当日4-7時間以内</strong>に配達可能。</li>
-                            <li><strong>柔軟性:</strong> 70ポンドを超える大型荷物や不規則な形状の荷物も、適切な車両を持つドライバーとマッチングすることで対応可能。USPSの70ポンド制限や、UPS/FedExの高額な特大荷物料金を回避。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section-divider"></div>
-            
-            <!-- ドライバー収入シミュレーション -->
-            <div class="section" id="driver-income">
-                <h2>ドライバー収入シミュレーション</h2>
-                
-                <h3>計算式と変数定義</h3>
-                <div class="two-column">
-                    <div class="column">
-                        <ul>
-                            <li><strong>P:</strong> HitchHaulが発送者から受け取る配送料</li>
-                            <li><strong>r:</strong> プラットフォーム手数料率（15%＝0.15）</li>
-                            <li><strong>I:</strong> ドライバーの手取り収入（I＝P×(1-r)）</li>
-                            <li><strong>F:</strong> 追加燃料コスト（迂回・停車による増加分）</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <ul>
-                            <li><strong>T:</strong> 追加作業時間（時間単位）</li>
-                            <li><strong>実質時給:</strong> (I-F)÷T</li>
-                            <li><strong>追加時間の目安:</strong> 荷物の受け取り・引き渡し・連絡など</li>
-                            <li><strong>追加燃料の目安:</strong> 迂回距離5-20マイル、燃費25mpg、ガソリン$3/ガロン</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <h3>既存移動を活用した追加収入（50ポンド荷物の場合）</h3>
-                <p>HitchHaulでは、ドライバーは<strong>既に計画している移動</strong>の空きスペースを活用するため、追加の時間・コストを最小限に抑えながら収入を得られます。</p>
-                
-                <table class="price-sim">
-                    <tr>
-                        <th>ルート</th>
-                        <th>距離</th>
-                        <th>HitchHaul<br>配送料(P)</th>
-                        <th>ドライバー<br>収入(I)*</th>
-                        <th>追加<br>燃料費(F)</th>
-                        <th>追加時間(T)</th>
-                        <th>実質時給<br>(I-F)÷T</th>
-                    </tr>
-                    <tr>
-                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
-                        <td>10マイル</td>
-                        <td>$15.00</td>
-                        <td>$12.75</td>
-                        <td>$0.50</td>
-                        <td>30分<br>(0.5h)</td>
-                        <td>$24.50</td>
-                    </tr>
-                    <tr>
-                        <td>LA→ラスベガス</td>
-                        <td>270マイル</td>
-                        <td>$25.00</td>
-                        <td>$21.25</td>
-                        <td>$2.00</td>
-                        <td>45分<br>(0.75h)</td>
-                        <td>$25.67</td>
-                    </tr>
-                    <tr>
-                        <td>LA→NY</td>
-                        <td>2,800マイル</td>
-                        <td>$75.00</td>
-                        <td>$63.75</td>
-                        <td>$5.00</td>
-                        <td>90分<br>(1.5h)</td>
-                        <td>$39.17</td>
-                    </tr>
-                </table>
-                <p>* ドライバー収入(I)＝配送料(P)×(1-手数料率(15%))</p>
-                
-                <h3>複数荷物のまとめ配送（50ポンド荷物の場合）</h3>
-                <p>一度の移動で複数の配送を引き受けることで収入を最大化できます。</p>
-                
-                <table class="price-sim">
-                    <tr>
-                        <th>ルート</th>
-                        <th>荷物数</th>
-                        <th>総収入(I)*</th>
-                        <th>追加<br>燃料費(F)</th>
-                        <th>追加時間(T)</th>
-                        <th>実質時給<br>(I-F)÷T</th>
-                    </tr>
-                    <tr>
-                        <td>NY市内</td>
-                        <td>2件<br>($15×2)</td>
-                        <td>$25.50</td>
-                        <td>$1.25</td>
-                        <td>45分<br>(0.75h)</td>
-                        <td>$32.33</td>
-                    </tr>
-                    <tr>
-                        <td>LA→ラスベガス</td>
-                        <td>3件<br>($25×3)</td>
-                        <td>$63.75</td>
-                        <td>$5.00</td>
-                        <td>90分<br>(1.5h)</td>
-                        <td>$39.17</td>
-                    </tr>
-                    <tr>
-                        <td>LA→NY</td>
-                        <td>4件<br>($75×4)</td>
-                        <td>$255.00</td>
-                        <td>$15.00</td>
-                        <td>3時間<br>(3.0h)</td>
-                        <td>$80.00</td>
-                    </tr>
-                </table>
-                <p>* 総収入(I)＝各配送料×件数×(1-手数料率(15%))</p>
-                
-                <h3>定期的な州間移動での月間収入（50ポンド荷物の場合）</h3>
-                <table class="price-sim">
-                    <tr>
-                        <th>移動頻度</th>
-                        <th>ルート例</th>
-                        <th>月間総収入*</th>
-                        <th>月間追加<br>燃料費</th>
-                        <th>月間<br>純収入</th>
-                    </tr>
-                    <tr>
-                        <td>週1回</td>
-                        <td>LA→ラスベガス<br>(往復、各3件)<br>($25×3件×2方向×4週)</td>
-                        <td>$510.00</td>
-                        <td>$40.00</td>
-                        <td>$470.00</td>
-                    </tr>
-                    <tr>
-                        <td>月2回</td>
-                        <td>NY→ボストン<br>(往復、各2件)<br>($25×2件×2方向×2回)</td>
-                        <td>$200.00</td>
-                        <td>$25.00</td>
-                        <td>$175.00</td>
-                    </tr>
-                    <tr>
-                        <td>月1回</td>
-                        <td>LA→NY<br>(往復、各4件)<br>($75×4件×2方向×1回)</td>
-                        <td>$510.00</td>
-                        <td>$30.00</td>
-                        <td>$480.00</td>
-                    </tr>
-                </table>
-                <p>* 月間総収入＝各配送料×件数×往復×頻度×(1-手数料率(15%))</p>
-                
-                <div class="highlight-box">
-                    <p><strong>Win-Winモデル:</strong> HitchHaulはドライバーには「少ない追加労力で高い実質時給の副収入」を、荷物の送り手には「低コスト・迅速な配送」を同時に実現する革新的なプラットフォームです。特に長距離・定期移動をする方にとって、従来は「純粋な支出」だった移動を「収入源」に変えます。実際の料金を比較すると、当初の見積もりより更に大きな<strong>50〜80%のコスト削減</strong>が可能であることが分かります。</p>
-                </div>
-            </div>
-            
-            <div class="section-divider"></div>
-            
-            <!-- 追加: 配送料金グラフシミュレーション -->
-            <div class="section" id="pricing-graph">
-                <h2>配送料金グラフシミュレーション</h2>
-                <p>距離と荷物サイズに応じた各配送業者の料金比較をグラフで視覚的に確認できます。</p>
-                
-                <div class="chart-controls">
-                    <div>
-                        <label for="price-package-size" class="select-label">パッケージサイズ:</label>
-                        <select id="price-package-size" class="package-select">
-                            <option value="small">小型 (～25ポンド)</option>
-                            <option value="medium">中型 (25～50ポンド)</option>
-                            <option value="large" selected>大型 (50～100ポンド)</option>
-                            <option value="xlarge">特大 (100～150ポンド)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="price-carrier" class="select-label">配送業者:</label>
-                        <select id="price-carrier" class="package-select">
-                            <option value="all" selected>全て表示</option>
-                            <option value="ups">UPS Ground</option>
-                            <option value="fedex">FedEx Ground</option>
-                            <option value="usps">USPS Ground</option>
-                            <option value="hitchhaul">HitchHaul</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <canvas id="price-chart"></canvas>
-            </div>
-            
-                <div class="highlight-box">
-                    <p><strong>配送距離に関わらずコスト優位性を維持:</strong> HitchHaulは短距離から長距離まで一貫して従来の配送業者より大幅に低いコストで配送サービスを提供します。特に50ポンド以上の大型荷物では、その差はさらに顕著になり、全ての距離帯で<strong>50～80%のコスト削減</strong>を実現します。</p>
-                </div>
-            </div>
-            
-            <!-- 追加: ドライバー収入グラフシミュレーション -->
-            <div class="section" id="driver-income-graph">
-                <h2>ドライバー収入グラフシミュレーション</h2>
-                <p>距離と荷物サイズに応じた平均的なドライバー収入をグラフで視覚的に確認できます。</p>
-                
-                <div class="chart-controls">
-                    <div>
-                        <label for="income-package-size" class="select-label">パッケージサイズ:</label>
-                        <select id="income-package-size" class="package-select">
-                            <option value="small">小型 (～25ポンド)</option>
-                            <option value="medium">中型 (25～50ポンド)</option>
-                            <option value="large" selected>大型 (50～100ポンド)</option>
-                            <option value="xlarge">特大 (100～150ポンド)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="income-package-count" class="select-label">1回の移動での荷物数:</label>
-                        <select id="income-package-count" class="package-select">
-                            <option value="1">1件</option>
-                            <option value="2" selected>2件</option>
-                            <option value="3">3件</option>
-                            <option value="4">4件</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <canvas id="income-chart"></canvas>
-                </div>
-                
-                <div class="highlight-box">
-                    <p><strong>距離に応じた収入の増加:</strong> 長距離移動ほど収入が増加し、特に複数荷物を運ぶ場合は効率的に収入を最大化できます。小型荷物でも複数件扱うことで総収入を大きく伸ばせます。HitchHaulは「移動は単なる支出」という常識を覆し、<strong>収入機会に変える</strong>プラットフォームです。</p>
-                </div>
-            </div>
-            
-            <div class="section-divider"></div>
-            
-            <!-- セクション: HitchHaul競合分析 -->
-            <div class="section" id="competitive-analysis">
-                <h2>HitchHaul競合分析：市場機会と戦略的示唆</h2>
-                
-                <div class="vision-statement">
-                    <p>物流市場には多様なプレイヤーが存在しますが、<strong>「州間長距離の純粋な"ついで"を利用した貨物輸送」</strong>は、既存大手が注力しなかった、あるいは当時のスタートアップが取り組みきれなかった未開拓の領域です。HitchHaulは、現代の流行の後押しと独自のリーンなアプローチで、このニッチながらも大きな潜在市場に挑みます。</p>
-                </div>
-                
-                <!-- 新しく追加するVenn図 -->
-                <h3>市場ポジショニング：「ついで」「貨物」「州間」の3要素</h3>
-                <div style="width: 100%; max-width: 800px; margin: 40px auto; position: relative;">
-                    <svg viewBox="0 0 800 600" style="width: 100%; height: auto;">
-                        <!-- 円の定義 -->
-                        <circle cx="300" cy="220" r="180" fill="rgba(255, 100, 100, 0.4)" />
-                        <circle cx="500" cy="220" r="180" fill="rgba(100, 255, 100, 0.4)" />
-                        <circle cx="400" cy="380" r="180" fill="rgba(100, 100, 255, 0.4)" />
-                        
-                        <!-- ラベルの配置 - 円の外側に配置し、120度間隔で配置 -->
-                        <text x="120" y="70" font-size="24" font-weight="bold" text-anchor="middle">ついで</text>
-                        <text x="680" y="70" font-size="24" font-weight="bold" text-anchor="middle">貨物</text>
-                        <text x="400" y="580" font-size="24" font-weight="bold" text-anchor="middle">州間</text>
-                    </svg>
-                    
-                    <!-- ロゴの配置（絶対位置指定） -->
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                        <!-- HitchHaul（中央） -->
-                        <img src="hitchhaul_logo.png" alt="HitchHaul" style="position: absolute; width: 80px; height: 80px; top: 260px; left: 360px; z-index: 10;">
-                        
-                        <!-- ついでエリア -->
-                        <img src="DoorDash_logo.png" alt="DoorDash" style="position: absolute; width: 50px; height: 50px; top: 150px; left: 220px;">
-                        
-                        <!-- ついで×貨物の重複エリア -->
-                        <img src="roadie_logo_square.jpg" alt="Roadie" style="position: absolute; width: 50px; height: 50px; top: 180px; left: 400px;">
-                        
-                        <!-- ついで×州間の重複エリア -->
-                        <img src="uberconnect_logo.png" alt="Uber Connect" style="position: absolute; width: 50px; height: 50px; top: 300px; left: 260px;">
-                        
-                        <!-- 貨物エリア -->
-                        <img src="Dolly_logo.webp" alt="Dolly" style="position: absolute; width: 50px; height: 50px; top: 150px; left: 520px;">
-                        <img src="goshare_logo.webp" alt="GoShare" style="position: absolute; width: 50px; height: 50px; top: 220px; left: 580px;">
-                        
-                        <!-- 貨物×州間の重複エリア -->
-                        <img src="uberrush_logo.jpeg" alt="Uber RUSH" style="position: absolute; width: 50px; height: 50px; top: 340px; left: 520px; opacity: 0.5;">
-                        
-                        <!-- 州間エリア -->
-                        <img src="Hitch_logo_square.png" alt="Hitch" style="position: absolute; width: 50px; height: 50px; top: 440px; left: 400px;">
-                    </div>
-                </div>
-                <p style="text-align: center; margin-bottom: 30px; font-weight: bold; color: var(--primary-color);"><strong>HitchHaulの独自ポジション：</strong> 「ついで」「貨物」「州間」の3要素を初めて統合した唯一のサービス</p>
-                
-                <div class="highlight-box">
-                    <h4>なぜ「ついで×貨物」は前例がないのか？</h4>
-                    <p>既存プレイヤーはそれぞれ特定の領域に特化しており、3要素を真に統合したサービスは存在していません。これは技術的制約や市場環境の未成熟が要因でしたが、現在はその条件が整っています。</p>
-                </div>
-                
-                <h3>主要競合サービス包括比較表</h3>
-                <div class="table-container">
-                <table class="comparison-table">
-                    <tr>
-                            <th>サービス名</th>
-                            <th>ビジネスモデル</th>
-                            <th>対象距離</th>
-                            <th>荷物タイプ</th>
-                            <th>ドライバータイプ</th>
-                            <th>料金優位性</th>
-                            <th>主な強み</th>
-                            <th>主な弱み</th>
-                    </tr>
-                    <tr>
-                            <td><img src="roadie_logo_square.jpg" alt="Roadie" class="table-logo"><br><strong>Roadie</strong></td>
-                            <td>都市型「ついで」配送<br>（UPS傘下）</td>
-                            <td>10-50マイル<br>（都市内・近郊）</td>
-                            <td>小〜中型荷物<br>食品・小売商品</td>
-                            <td>兼業→専業化<br>進行中</td>
-                            <td>従来比10-40%減</td>
-                            <td>・31万人のドライバー網<br>・UPSとの統合インフラ<br>・B2B顧客基盤</td>
-                            <td>・長距離ついでから撤退<br>・専業化で環境メリット減<br>・高固定費構造</td>
-                    </tr>
-                    <tr>
-                            <td><img src="Hitch_logo_square.png" alt="Hitch" class="table-logo"><br><strong>Hitch</strong></td>
-                            <td>長距離ライドシェア<br>（人のみ）</td>
-                            <td>100-350マイル<br>（州間長距離）</td>
-                            <td>貨物配送停止<br>（人の輸送のみ）</td>
-                            <td>個人ドライバー<br>（純粋ついで）</td>
-                            <td>N/A<br>（貨物なし）</td>
-                            <td>・長距離移動需要実証<br>・30万回超の輸送実績<br>・純粋ついでモデル</td>
-                            <td>・貨物配送から撤退<br>・3州限定<br>・旅客中心戦略</td>
-                    </tr>
-                    <tr>
-                            <td><img src="goshare_logo.webp" alt="GoShare" class="table-logo"><br><strong>GoShare</strong></td>
-                            <td>トラック・バン配送<br>オンデマンド</td>
-                            <td>都市内<br>（5-30マイル）</td>
-                            <td>大型荷物・家具<br>建設資材</td>
-                            <td>専用車両<br>（トラック・バン）</td>
-                            <td>従来比20-30%減</td>
-                            <td>・大型荷物対応<br>・即日配送<br>・専用車両の信頼性</td>
-                            <td>・短距離限定<br>・専用移動で環境負荷<br>・高コスト構造</td>
-                    </tr>
-                    <tr>
-                            <td><img src="uberconnect_logo.png" alt="Uber Connect" class="table-logo"><br><strong>Uber Connect</strong></td>
-                            <td>ライドシェア<br>ドライバー活用</td>
-                            <td>都市内<br>（最大30マイル）</td>
-                            <td>小型荷物のみ<br>（最大30ポンド）</td>
-                            <td>Uberドライバー<br>（副業ベース）</td>
-                            <td>従来比30-50%減</td>
-                            <td>・膨大なドライバー網<br>・既存インフラ活用<br>・当日配送</td>
-                            <td>・小型荷物限定<br>・短距離のみ<br>・Uberの副次サービス</td>
-                    </tr>
-                    <tr>
-                            <td><img src="Dolly_logo.webp" alt="Dolly" class="table-logo"><br><strong>Dolly</strong></td>
-                            <td>引越し・配送<br>専門サービス</td>
-                            <td>都市内<br>（5-25マイル）</td>
-                            <td>大型家具・家電<br>引越し荷物</td>
-                            <td>専門作業員<br>（引越し経験者）</td>
-                            <td>引越し業者比<br>40-60%減</td>
-                            <td>・専門技術<br>・大型荷物対応<br>・保険充実</td>
-                            <td>・短距離限定<br>・高い人件費<br>・専用移動で環境負荷</td>
-                    </tr>
-                    <tr>
-                            <td><img src="DoorDash_logo.png" alt="DoorDash" class="table-logo"><br><strong>DoorDash</strong></td>
-                            <td>フードデリバリー<br>ついで配送</td>
-                            <td>都市内<br>（3-15マイル）</td>
-                            <td>食品・小売商品<br>（小型のみ）</td>
-                            <td>Dashers<br>（ついで配送）</td>
-                            <td>従来比10-20%減</td>
-                            <td>・大規模ネットワーク<br>・高頻度配送<br>・ついで活用</td>
-                            <td>・小型荷物限定<br>・短距離のみ<br>・食品中心</td>
-                        </tr>
-                        <tr style="background-color: var(--highlight-bg); font-weight: bold;">
-                            <td><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"><br><strong>HitchHaul</strong></td>
-                            <td>純粋ついで配送<br>州間特化</td>
-                            <td>100-3000マイル<br>（州間長距離）</td>
-                            <td>中〜大型荷物<br>家具・設備</td>
-                            <td>個人ドライバー<br>（純粋ついで）</td>
-                            <td>従来比50-80%減</td>
-                            <td>・長距離×ついでの唯一解<br>・大幅コスト削減<br>・環境負荷最小<br>・超リーン運営</td>
-                            <td>・新規市場開拓<br>・ネットワーク構築必要<br>・規制対応</td>
-                        </tr>
-                        <tr style="opacity: 0.6;">
-                            <td><img src="uberrush_logo.jpeg" alt="Uber RUSH" class="table-logo"><br><strong>Uber RUSH</strong><br><small>（サービス終了）</small></td>
-                            <td>オンデマンド配送<br>（2018年終了）</td>
-                            <td>都市内<br>（5-20マイル）</td>
-                            <td>小〜中型荷物<br>B2B中心</td>
-                            <td>Uberドライバー<br>専用配送</td>
-                            <td>従来比20-40%減</td>
-                            <td>・Uberの既存基盤<br>・迅速配送</td>
-                            <td>・収益性の課題<br>・競合激化<br>・戦略転換</td>
-                    </tr>
-                </table>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4>HitchHaulの独自ポジション</h4>
-                    <p><strong>市場分析からの結論：</strong> 既存サービスは「都市内短距離」または「貨物専用車両」に特化しており、「州間長距離×純粋ついで×大型荷物」の領域は完全に未開拓です。HitchHaulはこの3要素を統合した唯一のサービスとして、<strong>50-80%の大幅コスト削減</strong>と<strong>環境負荷最小化</strong>を同時実現します。</p>
-            </div>
-            
-                <h3>HitchHaulの市場機会：なぜ「今」「HitchHaulに」できるのか？</h3>
-                
-                <div class="two-column">
-                    <div class="column">
-                        <h4>HitchHaulの絶対的な強み</h4>
-                        <div class="pros">
-                            <ul>
-                                <li><strong>特化戦略：</strong> 「州間長距離 × 大型荷物 × 純粋なついで」というニッチに特化</li>
-                                <li><strong>超リーンな事業モデル：</strong> MVP開発、AWS Activate活用による初期固定費の大幅圧縮</li>
-                                <li><strong>現代のテクノロジー活用：</strong> AIによる高度なマッチング、モバイル完結のUX、APIベースの保険</li>
-                                <li><strong>純粋性の追求：</strong> 「既存移動の徹底活用」によるメリット最大化</li>
-                        </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="column">
-                        <h4>タイミングの優位性</h4>
-                        <div class="cons">
-                            <ul>
-                                <li><strong>シェアリングエコノミーの成熟：</strong> 社会的受容性の向上とギグワーカー人口の増大</li>
-                                <li><strong>環境意識の高まり：</strong> 「未活用リソースの活用」への共感</li>
-                                <li><strong>技術基盤の成熟：</strong> 位置追跡、AI予測、決済システムの発達</li>
-                                <li><strong>法規制の整備：</strong> プラットフォーム事業者向けの法的フレームワーク確立</li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-                
-                <h3>RoadieとHitchの成功実証から見る「ついで×貨物×州間」の市場可能性</h3>
-                <div class="pros-cons">
-                    <div class="pros">
-                        <h4>Roadieの実証：「ついで配送」の市場受容性</h4>
-                        <ul>
-                            <li><strong>31万人のドライバー獲得：</strong> 「空きスペース活用」コンセプトの社会的受容性を実証</li>
-                            <li><strong>UPSによる約5億ドル買収：</strong> 「ついで」モデルの事業価値を大手物流企業が認識</li>
-                            <li><strong>B2B顧客基盤の確立：</strong> 企業が「ついで配送」を信頼できるソリューションとして採用</li>
-                            <li><strong>技術的ノウハウの蓄積：</strong> マッチングアルゴリズム、保険設計、規制対応の成功事例</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="cons">
-                        <h4>Hitchの実証：「州間長距離移動」の需要存在</h4>
-                        <ul>
-                            <li><strong>30万回超の輸送実績：</strong> 州間長距離移動に対する堅実な需要の存在を証明</li>
-                            <li><strong>月間3-5万人のアクティブユーザー：</strong> 長距離「ついで」移動のユーザーベース確立</li>
-                            <li><strong>3州での成功運営：</strong> 州間規制や保険問題への対応実績</li>
-                            <li><strong>純粋ついでモデルの維持：</strong> 専業化せずに個人ドライバーベースでの持続運営</li>
-                    </ul>
-                    </div>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4>市場可能性の確証：「ついで×貨物×州間」は未開拓の成功領域</h4>
-                    <p><strong>Roadieの成功</strong>は「ついで配送」への社会的受容性と事業価値を実証し、<strong>Hitchの成功</strong>は「州間長距離移動」の需要基盤と運営可能性を実証しました。両者の成功要素を統合した<strong>「ついで×貨物×州間」</strong>は、既存サービスが本格参入していない未開拓領域でありながら、成功の土台となる要素が全て揃った有望市場です。HitchHaulはこの実証済み市場機会を、現代の技術優位性と戦略的特化により確実に獲得できます。</p>
-                </div>
-            </div>
-            
-            <div class="section-divider"></div>
-<!-- セクション4.5: 市場規模とユーザー数予測 -->
+            <!-- セクション4.5: 市場規模とユーザー数予測 -->
             <div class="section" id="market-forecast">
     <h2>市場規模とユーザー数予測</h2>
 
@@ -3000,68 +2328,7 @@ $19.4B × 4% = $0.776B ($776M)</pre>
     <div class="two-column">
                     <div class="column">
             <h4>リーン固定費構造</h4>
-<h4>事業規模別シミュレーション</h4>
-<table class="price-sim">
-    <tr>
-        <th>ケース</th>
-        <th>件数/日</th>
-        <th>年間件数</th>
-        <th>総取引額<br>(年間)</th>
-        <th>手数料収入<br>(15%→18%)</th>
-        <th>付帯収入<br>(保険等)</th>
-        <th>変動費</th>
-        <th>固定費</th>
-        <th>営業利益</th>
-    </tr>
-    <tr>
-        <td><strong>ミニマム</strong></td>
-        <td>20</td>
-        <td>7,300</td>
-        <td>$292K</td>
-        <td>$43.8K</td>
-        <td>$21.9K</td>
-        <td>$14K</td>
-        <td>$49K</td>
-        <td><strong>+$2.7K</strong></td>
-    </tr>
-    <tr>
-        <td><strong>ベース</strong><br>(損益分岐点)</td>
-        <td>36</td>
-        <td>13,140</td> 
-        <td>$525.6K</td> 
-        <td>$78.8K</td>
-        <td>$39.4K</td> 
-        <td>$26K</td> 
-        <td>$52.5K</td>
-        <td><strong>+$39.7K</strong></td>
-    </tr>
-    <tr style="background-color: #fff3cd;"> 
-        <td><strong>拡大初期</strong></td>
-        <td>100</td>
-        <td>36,500</td>
-        <td>$1.46M</td>
-        <td>$219K</td>
-        <td>$109.5K</td>
-        <td>$72K</td>
-        <td>$80K</td>
-        <td><strong>+$176.5K</strong></td>
-    </tr>
-    <tr>
-        <td><strong>成熟期</strong></td>
-        <td>372</td>
-        <td>135,660</td>
-        <td>$17.5M</td>
-        <td>$3.15M (18%)</td>
-        <td>$542K</td>
-        <td>$268K</td>
-        <td>$250K</td>
-        <td><strong>+$3.17M</strong></td>
-    </tr>
-</table>
-<p>※付帯収益として「+$10 保険/プレミアム」の利用率30%を含む。<br>
-   <span style="font-size:smaller;">※売上=手数料収入+付帯収入、営業利益=売上-変動費-固定費<br>
-   ※成熟期は手数料率18%、その他のフェーズは15%を適用</span>
-</p>             <ul>
+            <ul>
                 <li><strong>開発費:</strong> 自社開発により初期費用抑制</li>
                 <li><strong>サーバー費:</strong> AWS Activateなど創業支援プログラム活用</li>
                 <li><strong>人件費:</strong> 共同創業者の開発スキル活用、最小限の体制</li>
@@ -3266,6 +2533,796 @@ if (canvasMarket) { // ID名を修正 (元はcanvas)
 </script>
 </div>
 <div class="section-divider"></div>
+
+            <!-- セクション5: 大手配送業社との比較 -->
+            <div class="section" id="comparison">
+                <h2>大手配送業社との比較</h2>
+                
+                <div class="table-container">
+                <table class="comparison-table">
+                    <tr>
+                            <th></th>
+                            <th>UPS</th>
+                            <th>FedEx</th>
+                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
+                    </tr>
+                    <tr>
+                        <td><strong>価格構造</strong></td>
+                        <td>高コスト基盤</td>
+                            <td>高コスト基盤</td>
+                            <td>50-80%の価格削減</td>
+                    </tr>
+                    <tr>
+                        <td><strong>配送速度</strong></td>
+                            <td>翌日〜数日</td>
+                        <td>翌日〜数日</td>
+                        <td>当日配送（4-8時間）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>カバレッジ</strong></td>
+                            <td>広範なネットワーク</td>
+                        <td>広範なネットワーク</td>
+                        <td>州間移動経路に限定</td>
+                    </tr>
+                    <tr>
+                        <td><strong>大型荷物</strong></td>
+                            <td>最大150ポンド、割高で追加手数料</td>
+                            <td>最大150ポンド、割高で追加手数料</td>
+                            <td>最大サイズに柔軟対応（車両による）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>受け渡し</strong></td>
+                            <td>固定的な時間設定</td>
+                        <td>固定的な時間設定</td>
+                        <td>カスタマイズ可能</td>
+                    </tr>
+                    <tr>
+                        <td><strong>環境負荷</strong></td>
+                        <td>専用車両による負荷</td>
+                            <td>専用車両による負荷</td>
+                            <td>既存移動の活用で33-50%の排出削減可能</td>
+                    </tr>
+                    <tr>
+                        <td><strong>追跡機能</strong></td>
+                        <td>標準的な追跡</td>
+                            <td>リアルタイム追跡可能</td>
+                        <td>リアルタイムGPS追跡</td>
+                    </tr>
+                </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <p>HitchHaulは<strong>大幅な低コスト</strong>、<strong>高速配送</strong>、<strong>大型荷物対応</strong>、<strong>配送の柔軟性</strong>、<strong>環境負荷軽減</strong>という点で大手配送業社に対して明確な優位性を持っています。</p>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <!-- セクション6: 実際の配送料金シミュレーション -->
+            <div class="section" id="pricing">
+                <h2>実際の配送料金シミュレーション</h2>
+                
+                <h3>大型荷物（70ポンド、18x18x18インチ）の配送時間比較</h3>
+                <div class="table-container">
+                <table class="price-sim">
+                    <tr>
+                        <th>ルート</th>
+                        <th>距離</th>
+                        <th>UPS Ground</th>
+                        <th>FedEx Ground</th>
+                        <th>USPS Ground</th>
+                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
+                    </tr>
+                    <tr>
+                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
+                        <td>10マイル</td>
+                        <td>1営業日</td>
+                        <td>1-2営業日</td>
+                        <td>2-5営業日</td>
+                        <td>当日<br>(1-3時間)</td>
+                    </tr>
+                    <tr>
+                        <td>LA→ラスベガス</td>
+                        <td>270マイル</td>
+                        <td>1営業日</td>
+                        <td>1-2営業日</td>
+                        <td>2-5営業日</td>
+                        <td>当日<br>(4-7時間)</td>
+                    </tr>
+                    <tr>
+                        <td>LA→NY</td>
+                        <td>2,800マイル</td>
+                        <td>4-5営業日</td>
+                        <td>4-5営業日</td>
+                        <td>2-5営業日</td>
+                        <td>2-3日<br>(移動時間に依存)</td>
+                    </tr>
+                </table>
+                </div>
+                
+                <h3>大型荷物（70ポンド、18x18x18インチ）の配送料金比較</h3>
+                <div class="table-container">
+                <table class="price-sim">
+                    <tr>
+                        <th>ルート</th>
+                        <th>距離</th>
+                        <th>UPS Ground</th>
+                        <th>FedEx Ground</th>
+                        <th>USPS Ground</th>
+                            <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"></th>
+                    </tr>
+                    <tr>
+                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
+                        <td>10マイル</td>
+                            <td>$60<br>(重量追加料金含む)</td>
+                            <td>$55<br>(重量追加料金含む)</td>
+                            <td>$60</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr class="hitchhaul">
+                        <td>削減率</td>
+                        <td></td>
+                            <td>75%</td>
+                            <td>73%</td>
+                            <td>75%</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LA→ラスベガス</td>
+                        <td>270マイル</td>
+                            <td>$100</td>
+                            <td>$90</td>
+                            <td>$110</td>
+                        <td>$25</td>
+                    </tr>
+                    <tr class="hitchhaul">
+                        <td>削減率</td>
+                        <td></td>
+                            <td>75%</td>
+                            <td>72%</td>
+                            <td>77%</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LA→NY</td>
+                        <td>2,800マイル</td>
+                            <td>$160</td>
+                            <td>$120</td>
+                            <td>$220<br>(最大重量限界)</td>
+                        <td>$75</td>
+                    </tr>
+                    <tr class="hitchhaul">
+                        <td>削減率</td>
+                        <td></td>
+                            <td>53%</td>
+                            <td>38%</td>
+                            <td>66%</td>
+                        <td></td>
+                    </tr>
+                </table>
+                </div>
+                
+                <h3>時間価値を含めた総合コスト比較</h3>
+                <p>急ぎの配送における時間価値を考慮した場合（1日=$50と仮定）：</p>
+                
+                <table class="price-sim">
+                    <tr>
+                        <th>ルート</th>
+                        <th>距離</th>
+                        <th>従来サービス<br>平均総コスト*</th>
+                        <th><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"><br>総コスト*</th>
+                        <th>削減率</th>
+                    </tr>
+                    <tr>
+                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
+                        <td>10マイル</td>
+                        <td>$110</td>
+                        <td>$15</td>
+                        <td>86%</td>
+                    </tr>
+                    <tr>
+                        <td>LA→ラスベガス</td>
+                        <td>270マイル</td>
+                        <td>$150</td>
+                        <td>$25</td>
+                        <td>83%</td>
+                    </tr>
+                    <tr>
+                        <td>LA→NY</td>
+                        <td>2,800マイル</td>
+                        <td>$375</td>
+                        <td>$175</td>
+                        <td>53%</td>
+                    </tr>
+                </table>
+                <p>*総コスト = 配送料(平均値) + 時間価値($50/日)</p>
+                
+                <div class="highlight-box">
+                    <p>HitchHaulは特に<strong>大型荷物</strong>と<strong>時間価値を重視するユーザー</strong>に対して、<strong>圧倒的なコスト優位性</strong>を提供します。実際の料金を比較すると、当初の見積もりより更に大きな<strong>50〜80%のコスト削減</strong>が可能であることが分かります。これはUberがタクシー業界を変革したのと同様に、<strong>州間物流の概念を根本から変える</strong>潜在力を示しています。</p>
+                </div>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <h3>HitchHaulのコスト優位性の詳細分析</h3>
+                        <ul>
+                            <li><strong>市内配送（約10マイル）:</strong> 従来の配送業者は70ポンドの大型荷物に対して50ポンド超過の追加手数料（約$25-30）を課すため、市内配送でも$55-60の高コスト。HitchHaulの$15との比較で<strong>70-80%のコスト削減</strong>を実現。</li>
+                            <li><strong>中距離配送（約270マイル）:</strong> LA→ラスベガスのような移動では、UPS/FedExは実際には$90-110の料金が発生。HitchHaulの$25は同じ移動をする一般ドライバーの「ついで配送」を活用することで<strong>70-77%の削減</strong>を実現。</li>
+                            <li><strong>長距離配送（約2,800マイル）:</strong> 大陸横断の配送では、USPSは70ポンド限界で$220前後、UPSは$160程度の高額料金。HitchHaulの$75で<strong>50-66%の削減</strong>を実現。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column">
+                        <h3>HitchHaulの環境・時間的価値</h3>
+                        <ul>
+                            <li><strong>環境負荷軽減:</strong> 既存の移動をフル活用することで、類似サービスでは<strong>配送距離を33-50%削減</strong>できることが実証済み。これは温室効果ガス排出量の大幅削減に直結。</li>
+                            <li><strong>速度の優位性:</strong> 特に中距離配送において顕著。LA→ラスベガスの場合、UPS/FedExの翌日配送と比較して、HitchHaulは<strong>当日4-7時間以内</strong>に配達可能。</li>
+                            <li><strong>柔軟性:</strong> 70ポンドを超える大型荷物や不規則な形状の荷物も、適切な車両を持つドライバーとマッチングすることで対応可能。USPSの70ポンド制限や、UPS/FedExの高額な特大荷物料金を回避。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <!-- ドライバー収入シミュレーション -->
+            <div class="section" id="driver-income">
+                <h2>ドライバー収入シミュレーション</h2>
+                
+                <h3>計算式と変数定義</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ul>
+                            <li><strong>P:</strong> HitchHaulが発送者から受け取る配送料</li>
+                            <li><strong>r:</strong> プラットフォーム手数料率（15%＝0.15）</li>
+                            <li><strong>I:</strong> ドライバーの手取り収入（I＝P×(1-r)）</li>
+                            <li><strong>F:</strong> 追加燃料コスト（迂回・停車による増加分）</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li><strong>T:</strong> 追加作業時間（時間単位）</li>
+                            <li><strong>実質時給:</strong> (I-F)÷T</li>
+                            <li><strong>追加時間の目安:</strong> 荷物の受け取り・引き渡し・連絡など</li>
+                            <li><strong>追加燃料の目安:</strong> 迂回距離5-20マイル、燃費25mpg、ガソリン$3/ガロン</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>既存移動を活用した追加収入（50ポンド荷物の場合）</h3>
+                <p>HitchHaulでは、ドライバーは<strong>既に計画している移動</strong>の空きスペースを活用するため、追加の時間・コストを最小限に抑えながら収入を得られます。</p>
+                
+                <table class="price-sim">
+                    <tr>
+                        <th>ルート</th>
+                        <th>距離</th>
+                        <th>HitchHaul<br>配送料(P)</th>
+                        <th>ドライバー<br>収入(I)*</th>
+                        <th>追加<br>燃料費(F)</th>
+                        <th>追加時間(T)</th>
+                        <th>実質時給<br>(I-F)÷T</th>
+                    </tr>
+                    <tr>
+                        <td>NY市内<br>(マンハッタン→ブルックリン)</td>
+                        <td>10マイル</td>
+                        <td>$15.00</td>
+                        <td>$12.75</td>
+                        <td>$0.50</td>
+                        <td>30分<br>(0.5h)</td>
+                        <td>$24.50</td>
+                    </tr>
+                    <tr>
+                        <td>LA→ラスベガス</td>
+                        <td>270マイル</td>
+                        <td>$25.00</td>
+                        <td>$21.25</td>
+                        <td>$2.00</td>
+                        <td>45分<br>(0.75h)</td>
+                        <td>$25.67</td>
+                    </tr>
+                    <tr>
+                        <td>LA→NY</td>
+                        <td>2,800マイル</td>
+                        <td>$75.00</td>
+                        <td>$63.75</td>
+                        <td>$5.00</td>
+                        <td>90分<br>(1.5h)</td>
+                        <td>$39.17</td>
+                    </tr>
+                </table>
+                <p>* ドライバー収入(I)＝配送料(P)×(1-手数料率(15%))</p>
+                
+                <h3>複数荷物のまとめ配送（50ポンド荷物の場合）</h3>
+                <p>一度の移動で複数の配送を引き受けることで収入を最大化できます。</p>
+                
+                <table class="price-sim">
+                    <tr>
+                        <th>ルート</th>
+                        <th>荷物数</th>
+                        <th>総収入(I)*</th>
+                        <th>追加<br>燃料費(F)</th>
+                        <th>追加時間(T)</th>
+                        <th>実質時給<br>(I-F)÷T</th>
+                    </tr>
+                    <tr>
+                        <td>NY市内</td>
+                        <td>2件<br>($15×2)</td>
+                        <td>$25.50</td>
+                        <td>$1.25</td>
+                        <td>45分<br>(0.75h)</td>
+                        <td>$32.33</td>
+                    </tr>
+                    <tr>
+                        <td>LA→ラスベガス</td>
+                        <td>3件<br>($25×3)</td>
+                        <td>$63.75</td>
+                        <td>$5.00</td>
+                        <td>90分<br>(1.5h)</td>
+                        <td>$39.17</td>
+                    </tr>
+                    <tr>
+                        <td>LA→NY</td>
+                        <td>4件<br>($75×4)</td>
+                        <td>$255.00</td>
+                        <td>$15.00</td>
+                        <td>3時間<br>(3.0h)</td>
+                        <td>$80.00</td>
+                    </tr>
+                </table>
+                <p>* 総収入(I)＝各配送料×件数×(1-手数料率(15%))</p>
+                
+                <h3>定期的な州間移動での月間収入（50ポンド荷物の場合）</h3>
+                <table class="price-sim">
+                    <tr>
+                        <th>移動頻度</th>
+                        <th>ルート例</th>
+                        <th>月間総収入*</th>
+                        <th>月間追加<br>燃料費</th>
+                        <th>月間<br>純収入</th>
+                    </tr>
+                    <tr>
+                        <td>週1回</td>
+                        <td>LA→ラスベガス<br>(往復、各3件)<br>($25×3件×2方向×4週)</td>
+                        <td>$510.00</td>
+                        <td>$40.00</td>
+                        <td>$470.00</td>
+                    </tr>
+                    <tr>
+                        <td>月2回</td>
+                        <td>NY→ボストン<br>(往復、各2件)<br>($25×2件×2方向×2回)</td>
+                        <td>$200.00</td>
+                        <td>$25.00</td>
+                        <td>$175.00</td>
+                    </tr>
+                    <tr>
+                        <td>月1回</td>
+                        <td>LA→NY<br>(往復、各4件)<br>($75×4件×2方向×1回)</td>
+                        <td>$510.00</td>
+                        <td>$30.00</td>
+                        <td>$480.00</td>
+                    </tr>
+                </table>
+                <p>* 月間総収入＝各配送料×件数×往復×頻度×(1-手数料率(15%))</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Win-Winモデル:</strong> HitchHaulはドライバーには「少ない追加労力で高い実質時給の副収入」を、荷物の送り手には「低コスト・迅速な配送」を同時に実現する革新的なプラットフォームです。特に長距離・定期移動をする方にとって、従来は「純粋な支出」だった移動を「収入源」に変えます。実際の料金を比較すると、当初の見積もりより更に大きな<strong>50〜80%のコスト削減</strong>が可能であることが分かります。</p>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <!-- 追加: 配送料金グラフシミュレーション -->
+            <div class="section" id="pricing-graph">
+                <h2>配送料金グラフシミュレーション</h2>
+                <p>距離と荷物サイズに応じた各配送業者の料金比較をグラフで視覚的に確認できます。</p>
+                
+                <div class="chart-controls">
+                    <div>
+                        <label for="price-package-size" class="select-label">パッケージサイズ:</label>
+                        <select id="price-package-size" class="package-select">
+                            <option value="small">小型 (～25ポンド)</option>
+                            <option value="medium">中型 (25～50ポンド)</option>
+                            <option value="large" selected>大型 (50～100ポンド)</option>
+                            <option value="xlarge">特大 (100～150ポンド)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="price-carrier" class="select-label">配送業者:</label>
+                        <select id="price-carrier" class="package-select">
+                            <option value="all" selected>全て表示</option>
+                            <option value="ups">UPS Ground</option>
+                            <option value="fedex">FedEx Ground</option>
+                            <option value="usps">USPS Ground</option>
+                            <option value="hitchhaul">HitchHaul</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="price-chart"></canvas>
+            </div>
+            
+                <div class="highlight-box">
+                    <p><strong>配送距離に関わらずコスト優位性を維持:</strong> HitchHaulは短距離から長距離まで一貫して従来の配送業者より大幅に低いコストで配送サービスを提供します。特に50ポンド以上の大型荷物では、その差はさらに顕著になり、全ての距離帯で<strong>50～80%のコスト削減</strong>を実現します。</p>
+                </div>
+            </div>
+            
+            <!-- 追加: ドライバー収入グラフシミュレーション -->
+            <div class="section" id="driver-income-graph">
+                <h2>ドライバー収入グラフシミュレーション</h2>
+                <p>距離と荷物サイズに応じた平均的なドライバー収入をグラフで視覚的に確認できます。</p>
+                
+                <div class="chart-controls">
+                    <div>
+                        <label for="income-package-size" class="select-label">パッケージサイズ:</label>
+                        <select id="income-package-size" class="package-select">
+                            <option value="small">小型 (～25ポンド)</option>
+                            <option value="medium">中型 (25～50ポンド)</option>
+                            <option value="large" selected>大型 (50～100ポンド)</option>
+                            <option value="xlarge">特大 (100～150ポンド)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="income-package-count" class="select-label">1回の移動での荷物数:</label>
+                        <select id="income-package-count" class="package-select">
+                            <option value="1">1件</option>
+                            <option value="2" selected>2件</option>
+                            <option value="3">3件</option>
+                            <option value="4">4件</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="income-chart"></canvas>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>距離に応じた収入の増加:</strong> 長距離移動ほど収入が増加し、特に複数荷物を運ぶ場合は効率的に収入を最大化できます。小型荷物でも複数件扱うことで総収入を大きく伸ばせます。HitchHaulは「移動は単なる支出」という常識を覆し、<strong>収入機会に変える</strong>プラットフォームです。</p>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <!-- セクション: HitchHaul競合分析 -->
+            <div class="section" id="competitive-analysis">
+                <h2>HitchHaul競合分析：市場機会と戦略的示唆</h2>
+                
+                <div class="vision-statement">
+                    <p>物流市場には多様なプレイヤーが存在しますが、<strong>「州間長距離の純粋な"ついで"を利用した貨物輸送」</strong>は、既存大手が注力しなかった、あるいは当時のスタートアップが取り組みきれなかった未開拓の領域です。HitchHaulは、現代の流行の後押しと独自のリーンなアプローチで、このニッチながらも大きな潜在市場に挑みます。</p>
+                </div>
+                
+                <!-- 新しく追加するVenn図 -->
+                <h3>市場ポジショニング：「ついで」「貨物」「州間」の3要素</h3>
+                <div style="width: 100%; max-width: 800px; margin: 40px auto; position: relative;">
+                    <svg viewBox="0 0 800 600" style="width: 100%; height: auto;">
+                        <!-- 円の定義 -->
+                        <circle cx="300" cy="220" r="180" fill="rgba(255, 100, 100, 0.4)" />
+                        <circle cx="500" cy="220" r="180" fill="rgba(100, 255, 100, 0.4)" />
+                        <circle cx="400" cy="380" r="180" fill="rgba(100, 100, 255, 0.4)" />
+                        
+                        <!-- ラベルの配置 - 円の外側に配置し、120度間隔で配置 -->
+                        <text x="120" y="70" font-size="24" font-weight="bold" text-anchor="middle">ついで</text>
+                        <text x="680" y="70" font-size="24" font-weight="bold" text-anchor="middle">貨物</text>
+                        <text x="400" y="580" font-size="24" font-weight="bold" text-anchor="middle">州間</text>
+                    </svg>
+                    
+                    <!-- ロゴの配置（絶対位置指定） -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <!-- HitchHaul（中央） -->
+                        <img src="hitchhaul_logo.png" alt="HitchHaul" style="position: absolute; width: 80px; height: 80px; top: 260px; left: 360px; z-index: 10;">
+                        
+                        <!-- ついでエリア -->
+                        <img src="DoorDash_logo.png" alt="DoorDash" style="position: absolute; width: 50px; height: 50px; top: 150px; left: 220px;">
+                        
+                        <!-- ついで×貨物の重複エリア -->
+                        <img src="roadie_logo_square.jpg" alt="Roadie" style="position: absolute; width: 50px; height: 50px; top: 180px; left: 400px;">
+                        
+                        <!-- ついで×州間の重複エリア -->
+                        <img src="uberconnect_logo.png" alt="Uber Connect" style="position: absolute; width: 50px; height: 50px; top: 300px; left: 260px;">
+                        
+                        <!-- 貨物エリア -->
+                        <img src="Dolly_logo.webp" alt="Dolly" style="position: absolute; width: 50px; height: 50px; top: 150px; left: 520px;">
+                        <img src="goshare_logo.webp" alt="GoShare" style="position: absolute; width: 50px; height: 50px; top: 220px; left: 580px;">
+                        
+                        <!-- 貨物×州間の重複エリア -->
+                        <img src="uberrush_logo.jpeg" alt="Uber RUSH" style="position: absolute; width: 50px; height: 50px; top: 340px; left: 520px; opacity: 0.5;">
+                        
+                        <!-- 州間エリア -->
+                        <img src="Hitch_logo_square.png" alt="Hitch" style="position: absolute; width: 50px; height: 50px; top: 440px; left: 400px;">
+                    </div>
+                </div>
+                <p style="text-align: center; margin-bottom: 30px; font-weight: bold; color: var(--primary-color);"><strong>HitchHaulの独自ポジション：</strong> 「ついで」「貨物」「州間」の3要素を初めて統合した唯一のサービス</p>
+                
+                <div class="highlight-box">
+                    <h4>なぜ「ついで×貨物」は前例がないのか？</h4>
+                    <p>既存プレイヤーはそれぞれ特定の領域に特化しており、3要素を真に統合したサービスは存在していません。これは技術的制約や市場環境の未成熟が要因でしたが、現在はその条件が整っています。</p>
+                </div>
+                
+                <h3>主要競合サービス包括比較表</h3>
+                <div class="table-container">
+                <table class="comparison-table">
+                    <tr>
+                            <th>サービス名</th>
+                            <th>ビジネスモデル</th>
+                            <th>対象距離</th>
+                            <th>荷物タイプ</th>
+                            <th>ドライバータイプ</th>
+                            <th>料金優位性</th>
+                            <th>主な強み</th>
+                            <th>主な弱み</th>
+                    </tr>
+                    <tr>
+                            <td><img src="roadie_logo_square.jpg" alt="Roadie" class="table-logo"><br><strong>Roadie</strong></td>
+                            <td>都市型「ついで」配送<br>（UPS傘下）</td>
+                            <td>10-50マイル<br>（都市内・近郊）</td>
+                            <td>小〜中型荷物<br>食品・小売商品</td>
+                            <td>兼業→専業化<br>進行中</td>
+                            <td>従来比10-40%減</td>
+                            <td>・31万人のドライバー網<br>・UPSとの統合インフラ<br>・B2B顧客基盤</td>
+                            <td>・長距離ついでから撤退<br>・専業化で環境メリット減<br>・高固定費構造</td>
+                    </tr>
+                    <tr>
+                            <td><img src="Hitch_logo_square.png" alt="Hitch" class="table-logo"><br><strong>Hitch</strong></td>
+                            <td>長距離ライドシェア<br>（人のみ）</td>
+                            <td>100-350マイル<br>（州間長距離）</td>
+                            <td>貨物配送停止<br>（人の輸送のみ）</td>
+                            <td>個人ドライバー<br>（純粋ついで）</td>
+                            <td>N/A<br>（貨物なし）</td>
+                            <td>・長距離移動需要実証<br>・30万回超の輸送実績<br>・純粋ついでモデル</td>
+                            <td>・貨物配送から撤退<br>・3州限定<br>・旅客中心戦略</td>
+                    </tr>
+                    <tr>
+                            <td><img src="goshare_logo.webp" alt="GoShare" class="table-logo"><br><strong>GoShare</strong></td>
+                            <td>トラック・バン配送<br>オンデマンド</td>
+                            <td>都市内<br>（5-30マイル）</td>
+                            <td>大型荷物・家具<br>建設資材</td>
+                            <td>専用車両<br>（トラック・バン）</td>
+                            <td>従来比20-30%減</td>
+                            <td>・大型荷物対応<br>・即日配送<br>・専用車両の信頼性</td>
+                            <td>・短距離限定<br>・専用移動で環境負荷<br>・高コスト構造</td>
+                    </tr>
+                    <tr>
+                            <td><img src="uberconnect_logo.png" alt="Uber Connect" class="table-logo"><br><strong>Uber Connect</strong></td>
+                            <td>ライドシェア<br>ドライバー活用</td>
+                            <td>都市内<br>（最大30マイル）</td>
+                            <td>小型荷物のみ<br>（最大30ポンド）</td>
+                            <td>Uberドライバー<br>（副業ベース）</td>
+                            <td>従来比30-50%減</td>
+                            <td>・膨大なドライバー網<br>・既存インフラ活用<br>・当日配送</td>
+                            <td>・小型荷物限定<br>・短距離のみ<br>・Uberの副次サービス</td>
+                    </tr>
+                    <tr>
+                            <td><img src="Dolly_logo.webp" alt="Dolly" class="table-logo"><br><strong>Dolly</strong></td>
+                            <td>引越し・配送<br>専門サービス</td>
+                            <td>都市内<br>（5-25マイル）</td>
+                            <td>大型家具・家電<br>引越し荷物</td>
+                            <td>専門作業員<br>（引越し経験者）</td>
+                            <td>引越し業者比<br>40-60%減</td>
+                            <td>・専門技術<br>・大型荷物対応<br>・保険充実</td>
+                            <td>・短距離限定<br>・高い人件費<br>・専用移動で環境負荷</td>
+                    </tr>
+                    <tr>
+                            <td><img src="DoorDash_logo.png" alt="DoorDash" class="table-logo"><br><strong>DoorDash</strong></td>
+                            <td>フードデリバリー<br>ついで配送</td>
+                            <td>都市内<br>（3-15マイル）</td>
+                            <td>食品・小売商品<br>（小型のみ）</td>
+                            <td>Dashers<br>（ついで配送）</td>
+                            <td>従来比10-20%減</td>
+                            <td>・大規模ネットワーク<br>・高頻度配送<br>・ついで活用</td>
+                            <td>・小型荷物限定<br>・短距離のみ<br>・食品中心</td>
+                        </tr>
+                        <tr style="background-color: var(--highlight-bg); font-weight: bold;">
+                            <td><img src="hitchhaul_logo.png" alt="HitchHaul" class="table-logo"><br><strong>HitchHaul</strong></td>
+                            <td>純粋ついで配送<br>州間特化</td>
+                            <td>100-3000マイル<br>（州間長距離）</td>
+                            <td>中〜大型荷物<br>家具・設備</td>
+                            <td>個人ドライバー<br>（純粋ついで）</td>
+                            <td>従来比50-80%減</td>
+                            <td>・長距離×ついでの唯一解<br>・大幅コスト削減<br>・環境負荷最小<br>・超リーン運営</td>
+                            <td>・新規市場開拓<br>・ネットワーク構築必要<br>・規制対応</td>
+                        </tr>
+                        <tr style="opacity: 0.6;">
+                            <td><img src="uberrush_logo.jpeg" alt="Uber RUSH" class="table-logo"><br><strong>Uber RUSH</strong><br><small>（サービス終了）</small></td>
+                            <td>オンデマンド配送<br>（2018年終了）</td>
+                            <td>都市内<br>（5-20マイル）</td>
+                            <td>小〜中型荷物<br>B2B中心</td>
+                            <td>Uberドライバー<br>専用配送</td>
+                            <td>従来比20-40%減</td>
+                            <td>・Uberの既存基盤<br>・迅速配送</td>
+                            <td>・収益性の課題<br>・競合激化<br>・戦略転換</td>
+                    </tr>
+                </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>HitchHaulの独自ポジション</h4>
+                    <p><strong>市場分析からの結論：</strong> 既存サービスは「都市内短距離」または「貨物専用車両」に特化しており、「州間長距離×純粋ついで×大型荷物」の領域は完全に未開拓です。HitchHaulはこの3要素を統合した唯一のサービスとして、<strong>50-80%の大幅コスト削減</strong>と<strong>環境負荷最小化</strong>を同時実現します。</p>
+            </div>
+            
+                <h3>HitchHaulの市場機会：なぜ「今」「HitchHaulに」できるのか？</h3>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <h4>HitchHaulの絶対的な強み</h4>
+                        <div class="pros">
+                            <ul>
+                                <li><strong>特化戦略：</strong> 「州間長距離 × 大型荷物 × 純粋なついで」というニッチに特化</li>
+                                <li><strong>超リーンな事業モデル：</strong> MVP開発、AWS Activate活用による初期固定費の大幅圧縮</li>
+                                <li><strong>現代のテクノロジー活用：</strong> AIによる高度なマッチング、モバイル完結のUX、APIベースの保険</li>
+                                <li><strong>純粋性の追求：</strong> 「既存移動の徹底活用」によるメリット最大化</li>
+                        </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <h4>タイミングの優位性</h4>
+                        <div class="cons">
+                            <ul>
+                                <li><strong>シェアリングエコノミーの成熟：</strong> 社会的受容性の向上とギグワーカー人口の増大</li>
+                                <li><strong>環境意識の高まり：</strong> 「未活用リソースの活用」への共感</li>
+                                <li><strong>技術基盤の成熟：</strong> 位置追跡、AI予測、決済システムの発達</li>
+                                <li><strong>法規制の整備：</strong> プラットフォーム事業者向けの法的フレームワーク確立</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                
+                <h3>RoadieとHitchの成功実証から見る「ついで×貨物×州間」の市場可能性</h3>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Roadieの実証：「ついで配送」の市場受容性</h4>
+                        <ul>
+                            <li><strong>31万人のドライバー獲得：</strong> 「空きスペース活用」コンセプトの社会的受容性を実証</li>
+                            <li><strong>UPSによる約5億ドル買収：</strong> 「ついで」モデルの事業価値を大手物流企業が認識</li>
+                            <li><strong>B2B顧客基盤の確立：</strong> 企業が「ついで配送」を信頼できるソリューションとして採用</li>
+                            <li><strong>技術的ノウハウの蓄積：</strong> マッチングアルゴリズム、保険設計、規制対応の成功事例</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cons">
+                        <h4>Hitchの実証：「州間長距離移動」の需要存在</h4>
+                        <ul>
+                            <li><strong>30万回超の輸送実績：</strong> 州間長距離移動に対する堅実な需要の存在を証明</li>
+                            <li><strong>月間3-5万人のアクティブユーザー：</strong> 長距離「ついで」移動のユーザーベース確立</li>
+                            <li><strong>3州での成功運営：</strong> 州間規制や保険問題への対応実績</li>
+                            <li><strong>純粋ついでモデルの維持：</strong> 専業化せずに個人ドライバーベースでの持続運営</li>
+                    </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>市場可能性の確証：「ついで×貨物×州間」は未開拓の成功領域</h4>
+                    <p><strong>Roadieの成功</strong>は「ついで配送」への社会的受容性と事業価値を実証し、<strong>Hitchの成功</strong>は「州間長距離移動」の需要基盤と運営可能性を実証しました。両者の成功要素を統合した<strong>「ついで×貨物×州間」</strong>は、既存サービスが本格参入していない未開拓領域でありながら、成功の土台となる要素が全て揃った有望市場です。HitchHaulはこの実証済み市場機会を、現代の技術優位性と戦略的特化により確実に獲得できます。</p>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <!-- セクション8: 収益モデル -->
+            <div class="section" id="revenue-model">
+                <h2>収益モデル</h2>
+                
+                <h3>超リーンな事業モデル</h3>
+                <p>HitchHaulは初期は単一の高需要ルートに特化し、最低限の機能のみを持つMVPを自前で開発することで、年間固定費を<strong>$50K〜80K</strong>に抑えます。これにより損益分岐点を大幅に引き下げ、わずか<strong>約1.3万件/年（約40件/日）</strong>で黒字化が可能になります。<br>
+                <small>[注: AWS Activateによる最大$100Kのクレジット支給等を活用した内部試算。]</small></p>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <h4>リーン固定費構造</h4>
+                        <ul>
+                            <li><strong>開発費:</strong> 自社開発により初期費用抑制</li>
+                            <li><strong>サーバー費:</strong> AWS Activateなど創業支援プログラム活用</li>
+                            <li><strong>人件費:</strong> 共同創業者の開発スキル活用、最小限の体制</li>
+                            <li><strong>マーケティング:</strong> コミュニティベースの低コスト獲得</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column">
+                        <h4>変動費と限界利益</h4>
+                        <table class="comparison-table">
+                    <tr>
+                                <th>項目</th>
+                                <th>金額/件</th>
+                    </tr>
+                    <tr>
+                                <td>平均配送料</td>
+                                <td>$40（大型荷物特化）</td>
+                    </tr>
+                    <tr>
+                                <td>手数料収入 (15%)</td>
+                                <td>$6.00</td>
+                    </tr>
+                    <tr>
+                                <td>Stripe決済手数料</td>
+                                <td>-$1.46</td>
+                            </tr>
+                            <tr>
+                                <td>基本保険プール</td>
+                                <td>-$0.50</td>
+                            </tr>
+                            <tr>
+                                <td><strong>変動費合計</strong></td>
+                                <td>-$1.96</td>
+                            </tr>
+                            <tr>
+                                <td><strong>限界利益/件</strong></td>
+                                <td>$4.04</td>
+                    </tr>
+                </table>
+                        <p>※ドライバー報酬は配送料から直接支払われます（手数料15%差引後の$34）</p>
+                    </div>
+                </div>
+                
+                <h3>損益分岐点分析</h3>
+                <div class="highlight-box">
+                    <p><strong>損益分岐点の計算:</strong><br>必要件数 = 固定費 ÷ 限界利益/件 = $49,000 ÷ $4.04 ≈ 13,200件/年<br>
+                    日次換算: 13,200 ÷ 365 ≈ <strong>40件/日</strong>（1ルートのみで十分達成可能な規模）</p>
+                </div>
+                
+                <h3>事業規模別シミュレーション</h3>
+                <table class="price-sim">
+                    <tr>
+                        <th>ケース</th>
+                        <th>件数/日</th>
+                        <th>年間件数</th>
+                        <th>売上<br>(手数料+付帯)</th>
+                        <th>変動費</th>
+                        <th>固定費</th>
+                        <th>営業利益</th>
+                    </tr>
+                    <tr>
+                        <td><strong>ミニマム</strong></td>
+                        <td>20</td>
+                        <td>7,300</td>
+                        <td>$116K</td>
+                        <td>$14K</td>
+                        <td>$49K</td>
+                        <td><strong>+$53K</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ベース</strong></td>
+                        <td>40</td>
+                        <td>14,600</td>
+                        <td>$232K</td>
+                        <td>$29K</td>
+                        <td>$49K</td>
+                        <td><strong>+$154K</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>拡大</strong></td>
+                        <td>100</td>
+                        <td>36,500</td>
+                        <td>$581K</td>
+                        <td>$72K</td>
+                        <td>$80K</td>
+                        <td><strong>+$429K</strong></td>
+                    </tr>
+                </table>
+                <p>※付帯収益として「+$10 保険/プレミアム」の利用率30%を含む</p>
+                
+                <h3>必要資金と収益化までの計画</h3>
+                <table class="price-sim">
+                    <tr>
+                        <th>ランウェイ</th>
+                        <th>必要調達額</th>
+                        <th>用途</th>
+                    </tr>
+                    <tr>
+                        <td>12ヶ月</td>
+                        <td><strong>$60-70K</strong></td>
+                        <td>固定費+20%予備。黒字化トリガー40件/日達成に集中</td>
+                    </tr>
+                    <tr>
+                        <td>18ヶ月（余裕）</td>
+                        <td><strong>$90-120K</strong></td>
+                        <td>マーケティングABテスト・ドライバーオンボード強化</td>
+                    </tr>
+                </table>
+                
+                <div class="highlight-box">
+                    <p><strong>超リーン戦略のまとめ:</strong> HitchHaulは「単一ルート×自前開発」という戦略で、サーバ費をAWSクレジットで相殺し、最小限のキャッシュアウトで立ち上げ可能です。最大リスクは「件数立ち上げ」ですが、単一路線×大型荷物に限定することでCACを抑え、<strong>20件/日でも黒字化</strong>が可能です。VCではなくエンジェル/助成金レベルの小規模調達で十分ローンチできます。</p>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
             
             <!-- セクション9: ユースケース例 -->
             <div class="section" id="use-cases">
