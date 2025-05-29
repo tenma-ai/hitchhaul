@@ -1561,12 +1561,12 @@
             <li class="toc-item" data-target="overview">概要</li>
             <li class="toc-item" data-target="problems">解決する課題</li>
             <li class="toc-item" data-target="why-america">なぜアメリカ市場なのか</li>
-            <li class="toc-item" data-target="market-forecast">市場規模とユーザー数予測</li>
-            <li class="toc-item" data-target="comparison">大手配送業社との比較</li>
+            <li class="toc-item" data-target="market-forecast">市場規模・ユーザー数予測・事業経済性</li> <li class="toc-item" data-target="comparison">大手配送業社との比較</li>
             <li class="toc-item" data-target="pricing">実際の配送料金シミュレーション</li>
             <li class="toc-item" data-target="driver-income">ドライバー収入シミュレーション</li>
+            <li class="toc-item" data-target="pricing-graph">配送料金グラフシミュレーション</li>
+            <li class="toc-item" data-target="driver-income-graph">ドライバー収入グラフシミュレーション</li>
             <li class="toc-item" data-target="competitive-analysis">HitchHaul競合分析：市場機会と戦略的示唆</li>
-            <li class="toc-item" data-target="revenue-model">収益モデル</li>
             <li class="toc-item" data-target="use-cases">ユースケース例</li>
             <li class="toc-item" data-target="app-features">アプリの機能とユーザーフロー</li>
             <li class="toc-item" data-target="challenges">考えられる課題とその対策</li>
@@ -2371,42 +2371,7 @@ $19.4B × 4% = $0.776B ($77.6M)</pre>
         </div>
     </div>
 
-    <h4>損益分岐点分析</h4>
-    <div class="highlight-box">
-        <p><strong>損益分岐点の計算 (年間固定費$49,000の場合):</strong><br>
-        必要件数 = 固定費 ÷ 限界利益/件 = $49,000 ÷ $4.04 ≈ 12,129件/年 (約1.21万件)<br>
-        <span style="font-size: smaller;">当初提示の13,200件/年 (約40件/日) は、固定費を約$53,328とした場合、または限界利益が異なる場合の計算に相当します。ここでは固定費$49Kを基準とします。日次換算: 12,129 ÷ 365 ≈ 33件/日</span><br>
-        日次換算 (当初の固定費 $53,328 の場合): 13,200 ÷ 365 ≈ 36件/日（1ルートのみで十分達成可能な規模）<br>
-        <strong style="color:red;">(上記注釈は思考過程のメモであり、実際のHTMLには含めません。ユーザーからの指示は「約1.3万件/年（約40件/日）」のため、それに合わせて調整します。)</strong>
-        </p>
-        <p><strong>損益分岐点の計算:</strong><br>
-        必要件数 = 固定費 ÷ 限界利益/件 = $53,240 ÷ $4.04 ≈ 13,178件/年 (約1.32万件)<br>
-        日次換算: 13,200 ÷ 365 ≈ 36件/日（1ルートのみで十分達成可能な規模。年間固定費を$53.2Kと仮定した場合。$49Kの場合は約1.21万件/年、約33件/日）<br>
-        <strong style="color:red;">(ユーザー提示の「約1.3万件/年（約40件/日）」という記述と計算結果の間の整合性を取るため、固定費を逆算するか、表現を調整します。ここではユーザー提示の件数と日次件数を尊重し、固定費$49,000のケースも併記するか、あるいは固定費の範囲$50K-$80Kの中間値で再計算を促す形が良いですが、「最低限の変更」を重視し、元々の表現に近い形にします。)</strong>
-        </p>
-        <p><strong>損益分岐点の計算 (年間固定費 $50K-$80K の範囲を考慮):</strong><br>
-        年間固定費を仮に$65,000とした場合: $65,000 ÷ $4.04/件 ≈ 16,090件/年 (約44件/日)<br>
-        年間固定費を$50,000とした場合: $50,000 ÷ $4.04/件 ≈ 12,376件/年 (約34件/日)<br>
-        <strong style="color:red;">ユーザーからのテキストで「約1.3万件/年（約40件/日）」、固定費$49,000で計算すると「12,129件/年（約33件/日）」となる。ユーザーの記述を優先し、固定費の記述を調整するのが最も変更が少ない。</strong>
-        </p>
-         <p><strong>損益分岐点の計算 (年間固定費を$50K～$80Kの中間的な値 約$52.5Kで試算):</strong><br>
-        必要件数 = 固定費 ÷ 限界利益/件 = $52,520 ÷ $4.04 ≈ 13,000件/年 (約1.3万件)<br>
-        日次換算: 13,000 ÷ 365 ≈ 36件/日 (1ルートのみで十分達成可能な規模)<br>
-        <strong style="color:red;">ユーザーの「約1.3万件/年（約40件/日）」に近づけるため、固定費の数値を調整するか、件数の表現を維持しつつ注釈で補足します。ここではユーザーの記述を尊重し、件数の数値を優先します。</strong>
-         </p>
-        <p><strong>損益分岐点の計算:</strong><br>
-        年間固定費を$50K〜$80Kと想定。仮に年間固定費を約$52,800とした場合：<br>
-        必要件数 = $52,800 ÷ $4.04/件 ≈ 13,069件/年 (約1.3万件)<br>
-        日次換算: 13,069件/年 ÷ 365日/年 ≈ 35.8件/日 (約36件/日)<br>
-        <span style="font-size:smaller;">(当初記述の「約40件/日」を達成するには、固定費が約$58,984の場合、または他の条件が若干異なる場合となります。ここでは「約1.3万件/年、約36件/日」で表記します。)</span>
-        </p>
-        <p><strong>損益分岐点分析</strong><br>
-        年間固定費を$50K〜$80Kと想定。仮に年間固定費を$52,500とした場合：<br>
-        必要件数 = $52,500 ÷ $4.04/件 ≈ 13,000件/年 (約1.3万件)<br>
-        日次換算: 13,000件/年 ÷ 365日/年 ≈ 35.6件/日 (約36件/日)
-        </p>
-    </div>
-
+    
 
     <h4>事業規模別シミュレーション</h4>
     <table class="price-sim">
